@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    width: 15%;
+    height: 15%;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(199, 199, 107);
+    
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type:none;
+    padding-right: 70px;
+    min-width: 400px;
+    gap: 100px;        
+      
+}
+a {
+color: green;
+}
