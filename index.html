@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href= "Assets/style.css" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Assets/style.css" rel="stylesheet" />
     <title>HikR</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-    <!--logo-->
-    <img src="Assets/images/Logo.png" alt="logo" class="logo">
-    <!--navigation bar-->
-    <nav>   
+      <!--logo-->
+      <img src="Assets/images/Logo.png" alt="logo" class="logo" />
+      <!--navigation bar-->
+      <nav>
         <ul>
-            <li><a href="#1">navigation1</a></li>
-            <li><a href="#1">navigation2</a></li>
-            <li><a href="#1">navigation3</a></li>
-            <li><a href="#1">navigation4</a></li>
+          <li><a href="#1">navigation1</a></li>
+          <li><a href="#1">navigation2</a></li>
+          <li><a href="#1">navigation3</a></li>
+          <li><a href="#1">navigation4</a></li>
         </ul>
-    </nav>
-</header>
-    <Section>
-        <Div class="pictures" id="pictures">
-            <img src="./Assets/images/holly-mandarich-UVyOfX3v0Ls-unsplash.jpg" alt="hiking" class="adventue-pic">
-        </Div>
-    </Section>
-    
+      </nav>
+    </header>
+    <section>
+      <div class="pictures" id="pictures">
+        <!--<a id="imglink" href="#">-->
+        <!--this img src allows that every time the user reload the page..the img will change-->
+        <img
+          src="https://source.unsplash.com/random/?hiking"
+          alt="hiking"
+          class="adventue-pic"
+        />
+      </div>
+    </section>
+
     <section class="user-input">
-        <!--user input-->
-        <div class="user-title">Enter your city name & clich "Search"</div>
-         <div class="input">
-        <label for="city">City</label>
-        <input type="text" id="city" autofocus placeholder="Enter your city">
-        <label for="Mile range">Mile Range</label>
-        <input type="number" id="Mile Range" size="2"/>
-         </div>
-        <button>Search</button>
-        
-       
-<!--<label for="textInput">Note the red caret:</label>
+      <!--user input-->
+      <div class="user-title">Enter your city name & clich "Search"</div>
+      <div class="input">
+        <label for="city" class="city">City</label>
+        <input
+          type="text"
+          id="city-input"
+          autofocus
+          placeholder="Enter your city"
+        />
+        <label for="Mile range" class="miles">Miles</label>
+        <input type="number" id="mile-range" size="3" />
+      </div>
+      <div>
+        <button class="search-btn">Search</button>
+      </div>
+
+      <!--<label for="textInput">Note the red caret:</label>
     <input id="textInput" class="custom" size="5" /> -->
     </section>
 
     <section>
-        <p>User Output</p>
+      <p>User Output</p>
     </section>
-</body>
+
+    <script src="./Assets/script.js" defer></script>
+  </body>
 </html>

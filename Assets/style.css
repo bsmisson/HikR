@@ -1,65 +1,88 @@
-body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
-    width: 10%;
-    height: 10%;
+  width: 10%;
+  height: 10%;
 }
 
-header{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    background-color: rgb(199, 199, 107);
-    
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(199, 199, 107);
 }
 
 ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type:none;
-    padding-right: 70px;
-    min-width: 400px;
-    gap: 100px;        
-      
+  display: flex;
+  list-style-type: none;
+  padding-right: 50px;
+  min-width: 400px;
+  gap: 50px;
 }
 a {
-color: green;
+  color: green;
 }
 
-.pictures{
-height: 400px;
-
+.adventue-pic {
+  width: 1265px;
+  height: 500px;
+  border: 1px solid black;
 }
-.adventue-pic{
-    width: 600px;
-
+.user-input {
+  height: 200px;
+  font-size: 20px;
+  background-color: rgba(71, 67, 67, 0.6);
+  padding: 1em;
 }
-.user-input{
-    position: relative;
-    left: 70px;
-    margin: 20px;
-    height: 200px;
-    font-size: 20px;
-    background-color:rgba(71, 67, 67, 0.6);
-    padding: 1em;
-    border: 1px solid black;
-    border-radius: 30px;
-    width: 500px;
-  
+.user-input .user-title {
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.user-input .user-title{
-    padding: 20px;
-
+.user-input .input {
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.user-input .input{
-    padding: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+.city {
+  padding: 10px;
+}
+#city-input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: white;
+  border-radius: 20px;
+  background: #2322222b;
+  font-family: inherit;
+}
+.miles {
+  padding: 10px;
+}
 
+#mile-range {
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: white;
+  border-radius: 20px;
+  background: #2322222b;
+  font-family: inherit;
+}
+.search-btn {
+  position: relative;
+  left: 600px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 30px;
+  font-size: 20px;
 }
