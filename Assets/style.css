@@ -1,7 +1,7 @@
 body{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 img {
@@ -28,4 +28,9 @@ ul {
 }
 a {
 color: green;
+}
+
+.pictures{
+height: 400px;
+border: 1px solid black;
 }
