@@ -1,9 +1,17 @@
+/* Color variables */
+:root {
+    --background1: rgb(207, 198, 113); 
+    --background2: rgb(32, 60, 32);
+    --background3: rgb(216, 236, 182);
+  }
+
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/*Logo image*/
 .imagen {
     width: 15%;
     height: 15%;
@@ -13,10 +21,10 @@ header{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background-color: rgb(207, 198, 113);
-    
+    background-color: var(--background1);   
 }
 
+/* Unordered list for navigation bar */
 ul {
     display: flex;
     justify-content: space-between;
@@ -27,14 +35,15 @@ ul {
       
 }
 
+/* Navigation text */
 a {
-color: green;
+color: var(--background2);
 }
 
-
+/* Slide backrground colors */
 .slide {
-    background-color: rgb(27, 71, 27);
-    background-color: rgb(207, 198, 113);;
+    background-color: var(--background2);
+    background-color: var(--background1)
 }
 
 .slider-frame {
@@ -79,3 +88,41 @@ color: green;
     float: left;
 }
 /*end of animation*/
+
+/*User input section*/
+.user-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    background-color: var(--background1) 
+}
+
+/*input boxes*/
+input {
+    margin-right: 5px;
+    background-color: rgb(226, 233, 205);
+    border: 1px solid var(--background2);
+    height: 25px;
+    border-radius: 5px;
+}
+
+/*Label for mile range*/
+label {
+    color: var(--background2);
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+/* Search-button parameters*/
+.search-btn {
+    font-size: 13px;
+    border-radius: 5px; 
+    border: 1px solid var(--background2);
+    height: 2.2em;
+    width: 4em; 
+    outline: none;
+    color: var(--background2);
+    background-color: var(--background3);       
+}
