@@ -56,11 +56,12 @@ ul {
 }
 .user-input .user-title {
     color: white;
-  padding: 20px;
+  padding: 25px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+
 }
 .user-input .input {
   padding: 20px;
