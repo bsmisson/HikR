@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #E3E8E9;
 }
 
 
@@ -26,8 +27,19 @@ ul {
   padding-right: 50px;
   min-width: 400px;
   gap: 50px;
+  list-style: none;
 }
-
+.list-link{
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.list-link:hover {
+  color: green;
+}
+.list-link:active {
+  color: blue;
+}
 
 .adventure-pic {
   width: 1265px;
@@ -124,16 +136,23 @@ border: 3px solid rgb(206, 197, 197);
     grid-gap: 20px;
 }
 .box{
-    height: 400px;
+    height: 350px;
     color: black;
-    border: 2px solid black;
+    border-radius: 8px;
     position: relative;
     bottom: 450px;
     left: 50px;
+    box-shadow: 10px 10px 10px gray;
+    background-color: rgba(133, 121, 121, 0.6);
 
 }
 .box-img{
-    width:362px;
+    width:365px;
     height: 200px;
 
+}
+
+.box .text{
+  padding: 10px;
+  
 }
