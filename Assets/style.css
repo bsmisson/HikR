@@ -17,6 +17,7 @@ header {
 .logo{
     height: 100px;
     width: 200px;
+}
    
 /* Unordered list for navigation bar */
 ul {
@@ -134,3 +135,4 @@ border: 3px solid rgb(206, 197, 197);
     width:362px;
     height: 200px;
 
+}
