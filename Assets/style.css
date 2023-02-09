@@ -1,3 +1,24 @@
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.logo{
+    height: 100px;
+    width: 200px;
+    
+=======
 /* Color variables */
 :root {
     --background1: rgb(207, 198, 113); 
@@ -21,19 +42,125 @@ header{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background-color: var(--background1);   
+    background-color: var(--background1);  
 }
 
 /* Unordered list for navigation bar */
 ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type:none;
-    padding-right: 70px;
-    min-width: 400px;
-    gap: 100px;        
-      
+  display: flex;
+  list-style-type: none;
+  padding-right: 50px;
+  min-width: 400px;
+  gap: 50px;
 }
+
+
+.adventure-pic {
+  width: 1265px;
+  height: 500px;
+  opacity: 0.6;
+
+}
+.paragraph{
+    display: flex;
+  position: relative;
+  bottom: 370px;
+  font-size: 30px;  
+  padding: 20px;
+  line-height:52px;
+}
+
+.user-input {
+  
+  font-size: 20px;
+  background-color: rgba(58, 54, 54, 0.6);
+  padding: 1em;
+  width: 480px;
+  height: 220px;
+  position: relative;
+  bottom: 570px;
+  left: 650px;
+  border-radius: 30px;
+}
+.user-input .user-title {
+    color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.user-input .input {
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.city {
+  padding: 10px;
+color: white;
+}
+#city-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  background: #03030373;
+  font-family: inherit;
+  font-size: 15px;
+}
+.miles {
+  padding: 10px;
+}
+
+#mile-range {
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  background: #03030373;
+  font-family: inherit;
+}
+.search-btn {
+  position: relative;
+  left: 190px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  background: #03030373;
+  color: white;
+     cursor: pointer;
+}
+.search-btn:hover{
+border: 3px solid rgb(206, 197, 197);
+}
+.boxes-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+.box{
+    height: 400px;
+    color: black;
+    border: 2px solid black;
+    position: relative;
+    bottom: 450px;
+    left: 50px;
+
+}
+.box-img{
+    width:362px;
+    height: 200px;
+
 
 /* Navigation text */
 a {
@@ -125,4 +252,5 @@ label {
     outline: none;
     color: var(--background2);
     background-color: var(--background3);       
+
 }
