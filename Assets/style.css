@@ -3,6 +3,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #E3E8E9;
+  font-family: 'Barlow', sans-serif;
 }
 
 
@@ -11,12 +13,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
 
 }
+/*LOGO*/
 .logo{
     height: 100px;
-    width: 200px;
+    width: 150px;
+border-radius: 50%;
+}
    
 /* Unordered list for navigation bar */
 ul {
@@ -25,8 +31,20 @@ ul {
   padding-right: 50px;
   min-width: 400px;
   gap: 50px;
+  list-style: none;
 }
-
+.list-link{
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: rgb(8, 60, 8);
+}
+.list-link:hover {
+  color: rgb(202, 96, 20);
+}
+.list-link:active {
+  color: blue;
+}
 
 .adventure-pic {
   width: 1265px;
@@ -34,6 +52,7 @@ ul {
   opacity: 0.6;
 
 }
+/*the text on the img*/
 .paragraph{
     display: flex;
   position: relative;
@@ -41,6 +60,13 @@ ul {
   font-size: 30px;  
   padding: 20px;
   line-height:52px;
+  color: white;
+  font-weight:800;
+}
+/*HikR*/
+.strong{
+  color: rgb(8, 60, 8);
+  font-weight: bold;
 }
 
 .user-input {
@@ -62,6 +88,7 @@ ul {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+
 }
 .user-input .input {
   padding: 20px;
@@ -122,15 +149,36 @@ border: 3px solid rgb(206, 197, 197);
     grid-gap: 20px;
 }
 .box{
-    height: 400px;
-    color: black;
-    border: 2px solid black;
+    height: 450px;
+    color: white;
+    border-radius: 8px;
     position: relative;
     bottom: 450px;
     left: 50px;
+    box-shadow: 10px 10px 10px gray;
+    background-color: #899e91;
 
 }
 .box-img{
-    width:362px;
+    width:365px;
     height: 200px;
 
+}
+
+.box .text{
+  padding: 10px;
+  font-size: 20px;
+  
+}
+.box-link{
+  text-decoration: none;
+  color: white;
+
+}
+.box-link:hover{
+  color: rgb(202, 96, 20);
+}
+/*attached html pages*/
+.info-list{
+  display: block;
+}
