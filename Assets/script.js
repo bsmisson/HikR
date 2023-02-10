@@ -1,24 +1,3 @@
-// //photos API
-// var clienId = "VdEHKKmqqxAx4RxDgF-oMV9fdq9XsQK70OBycvs5H1Q";
-// var endpoint =
-//   "https://api.unsplash.com/photos/random?client_id=VdEHKKmqqxAx4RxDgF-oMV9fdq9XsQK70OBycvs5H1Q";
-
-// var imageEl = document.querySelector(".adventue-pic");
-// var imageLink = document.getElementById("imglink");
-
-
-// fetch(endpoint)
-// .then(function(response){
-//     return response.json();
-// })
-// .then(function(jsonData){
-//     imageEl.src = jsonData.urls.regular;
-//     imageLink.setAttribute("href", jsonData.links.html);
-// })
-// .catch(function(error){
-//     console.log("error: ",error);
-// });
-
 const api_key = "aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
 let searchEl = document.getElementById("mybtn");
 let stateName = document.getElementById('city-input');
@@ -32,16 +11,21 @@ function findPark() {
     })
     .then(function (data) {
         console.log(data);
-        const parkName =(data.data[0].fullName);
-        const parkActivities =(data.data[0].activities[0].name);
+        var numberParks= data.total
+        console.log(numberParks);
+
+    for (var i=0; i<numberParks; i++){
+        const parkName =(data.data[i].fullName);
+        //const parkActivities =(data.data[i].activities[i].name);
         console.log(parkName);
-        console.log(parkActivities);
+       // console.log(parkActivities);
         const heading = document.createElement('h1');
         const activitiesList = document.createElement('ul');
         heading.innerHTML = parkName;
-        activitiesList.innerHTML = parkActivities;
+        //activitiesList.innerHTML = parkActivities;
         parkSec.appendChild(heading);
         parkSec.appendChild(activitiesList);
+    }
     });
 
 }
