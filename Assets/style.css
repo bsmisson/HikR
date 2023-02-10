@@ -142,13 +142,42 @@ color: white;
 .search-btn:hover{
 border: 3px solid rgb(206, 197, 197);
 }
+/*output container*/
+.output{
+  position: relative;
+  bottom: 400px;
+}
+/*the search result output text*/
+.output .output-txt{
+  background-color: #899e91;
+  width: 700px;
+  height: 550px;
+  position: relative;
+
+  bottom: 68px;
+}
+/*map img in output section*/
+.map-img{
+width: 600px;
+height: 450px;
+position: relative;
+bottom: 570px;
+left: 650px;
+box-shadow: 10px 10px 10px gray;
+
+}
+/*3 boxes container*/
 .boxes-container{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     grid-gap: 20px;
+      position: relative;
+  bottom: 400px;
 }
+/*each box style*/
 .box{
+
     height: 450px;
     color: white;
     border-radius: 8px;
@@ -159,17 +188,19 @@ border: 3px solid rgb(206, 197, 197);
     background-color: #899e91;
 
 }
+/*img inside each box*/
 .box-img{
     width:365px;
     height: 200px;
 
 }
-
+/*txt inside each box*/
 .box .text{
   padding: 10px;
   font-size: 20px;
   
 }
+/*text link in each box*/
 .box-link{
   text-decoration: none;
   color: white;

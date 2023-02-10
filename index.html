@@ -19,9 +19,9 @@
       <!--navigation bar-->
       <nav>
         <ul>
-          <li><a href="#1" class="list-link">Home</a></li><!--when the user click on it..it should open a map-->
-          <li><a href="#1" class="list-link">Search</a></li><!--scroll down to search section-->
-          <li><a href="#1" class="list-link">Information</a></li>
+          <li><a href="index.html" class="list-link">Home</a></li><!--when the user click on it..it should open a map-->
+          <li><a href="#user-input" class="list-link">Search</a></li><!--scroll down to search section-->
+          <li><a href="#box" class="list-link">Information</a></li>
           <li><a href="#1" class="list-link">About</a></li>
         </ul>
       </nav>
@@ -44,7 +44,7 @@
       
     </section>
 
-    <section class="user-input">
+    <section class="user-input" id="user-input">
       <!--user input-->
       <div class="user-title">Enter your city name & clich "Search"</div>
       <div class="input">
@@ -119,10 +119,20 @@
     <input id="textInput" class="custom" size="5" /> -->
 
     </section>
-  <p>User Output</p>
-    <section class="boxes-container">
+    <section class="result-output">
+      <div class="output" id="output">
+        <div class="output-txt" id="output-txt">
+          parks:
+        </div>
+        <div>
+          <img src="./Assets/images/Google-Maps-1068x599.png" class="map-img">
+        </div>
+      </div>
+    </section>
+  <!--3 boxes-->
+    <section class="boxes-container" id="boxes-container">
       
-      <div class="box">
+      <div class="box" id="box">
          <a href="info.html" title="information" class="box-link">
         <img src="./Assets/images/sign.jpg" alt="trail" class="box-img">
          <div class="text">
