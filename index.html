@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Link to the Tailwindcss -->
-      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Lato:ital,wght@0,300;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Lato:ital,wght@0,300;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="./Assets/style.css" rel="stylesheet" />
-    <title>HikR</title>
-    
+    <title>HikR</title> 
   </head>
+
   <body>
     <header>
         <!-- This is the "reponsive design" -->
@@ -33,147 +33,146 @@
 
 
 
-      <!--logo-->
-      <img src="./assets/images/Logo.png" alt="logo" class="logo" />
-      <!--navigation bar-->
-      <nav>
-        <ul>
-          <li><a href="index.html" class="list-link">Home</a></li><!--when the user click on it..it should open a map-->
-          <li><a href="#user-input" class="list-link">Search</a></li><!--scroll down to search section-->
-          <li><a href="#box" class="list-link">Information</a></li>
-          <li><a href="#1" class="list-link">About</a></li>
-        </ul>
-      </nav>
+        <!--logo-->
+        <img src="./assets/images/Logo.png" alt="logo" class="logo" />
+        <!--navigation bar-->
+        <nav>
+            <ul>
+              <li><a href="index.html" class="list-link">Home</a></li><!--when the user click on it..it should open a map-->
+              <li><a href="#user-input" class="list-link">Search</a></li><!--scroll down to search section-->
+              <li><a href="#box" class="list-link">Information</a></li>
+              <li><a href="#1" class="list-link">About</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="main">
-      <div class="pictures" id="pictures">
-        <!--<a id="imglink" href="#">-->
-        <!--this img src allows that every time the user reload the page..the img will change-->
-        <img
-          src="https://source.unsplash.com/random/?hiking"
-          alt="hiking"
-          class="adventure-pic"
-        />
-      </div>
-      <div class="paragraph">
-        <p>
-          <strong class="strong">HikR</strong> is designed to bring you one step<br> closer to your best hike.
-        </p>
-      </div>
+        <div class="pictures" id="pictures">
+          <!--<a id="imglink" href="#">-->
+          <!--this img src allows that every time the user reload the page..the img will change-->
+          <img
+            src="https://source.unsplash.com/random/?hiking"
+            alt="hiking"
+            class="adventure-pic"
+          />
+        </div>
+        <div class="paragraph">
+            <p>
+              <strong class="strong">HikR</strong> is designed to bring you one step<br> closer to your best hike.
+            </p>
+        </div>
     </section>
 
     <section class="user-input" id="user-input">
-      <!--user input-->
-      <div class="user-title">Enter your  State name & click "Search"</div>
-      <div class="input">
-        <label for="city" class="city">State</label>
-        <select id="city-input">
-          <option value="AL">Alabama</option>
-          <option value="AK">Alaska</option>
-          <option value="AZ">Arizona</option>
-          <option value="AR">Arkansas</option>
-          <option value="CA">California</option>
-          <option value="CO">Colorado</option>
-          <option value="CT">Connecticut</option>
-          <option value="DE">Delaware</option>
-          <option value="DC">District Of Columbia</option>
-          <option value="FL">Florida</option>
-          <option value="GA">Georgia</option>
-          <option value="HI">Hawaii</option>
-          <option value="ID">Idaho</option>
-          <option value="IL">Illinois</option>
-          <option value="IN">Indiana</option>
-          <option value="IA">Iowa</option>
-          <option value="KS">Kansas</option>
-          <option value="KY">Kentucky</option>
-          <option value="LA">Louisiana</option>
-          <option value="ME">Maine</option>
-          <option value="MD">Maryland</option>
-          <option value="MA">Massachusetts</option>
-          <option value="MI">Michigan</option>
-          <option value="MN">Minnesota</option>
-          <option value="MS">Mississippi</option>
-          <option value="MO">Missouri</option>
-          <option value="MT">Montana</option>
-          <option value="NE">Nebraska</option>
-          <option value="NV">Nevada</option>
-          <option value="NH">New Hampshire</option>
-          <option value="NJ">New Jersey</option>
-          <option value="NM">New Mexico</option>
-          <option value="NY">New York</option>
-          <option value="NC">North Carolina</option>
-          <option value="ND">North Dakota</option>
-          <option value="OH">Ohio</option>
-          <option value="OK">Oklahoma</option>
-          <option value="OR">Oregon</option>
-          <option value="PA">Pennsylvania</option>
-          <option value="RI">Rhode Island</option>
-          <option value="SC">South Carolina</option>
-          <option value="SD">South Dakota</option>
-          <option value="TN">Tennessee</option>
-          <option value="TX">Texas</option>
-          <option value="UT">Utah</option>
-          <option value="VT">Vermont</option>
-          <option value="VA">Virginia</option>
-          <option value="WA">Washington</option>
-          <option value="WV">West Virginia</option>
-          <option value="WI">Wisconsin</option>
-          <option value="WY">Wyoming</option>
-        </select>
-        <!-- <input
-          type="text"
-          id="city-input"
-          autofocus
-          placeholder="Enter your city"
-        /> -->
-        
-      <div>
-        <button id="mybtn" class="search-btn">Search</button>
-      </div>
+        <!--user input-->
+        <div class="user-title">Enter your  State name & click "Search"</div>
+        <div class="input">
+          <label for="city" class="city">State</label>
+          <select id="city-input">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+          <!-- <input
+            type="text"
+            id="city-input"
+            autofocus
+            placeholder="Enter your city"
+          /> -->
+            
+          <div>
+            <button id="mybtn" class="search-btn">Search</button>
+          </div>
 
-      <!--<label for="textInput">Note the red caret:</label>
-    <input id="textInput" class="custom" size="5" /> -->
-
+          <!--<label for="textInput">Note the red caret:</label>
+          <input id="textInput" class="custom" size="5" /> -->
     </section>
+
     <section class="result-output">
-      <div class="output" id="output">
-        <div class="output-txt" >
-          <h1 class="parks">National parks:</h1>
-          <div id="park-info"></div>
+        <div class="output" id="output">
+            <div class="output-txt" >
+              <h1 class="parks">National parks:</h1>
+              <div id="park-info"></div>
+            </div>
+            <img src="./Assets/images/Google-Maps-1068x599.png" class="map-img">            </div>
         </div>
-        <div>
-          <img src="./Assets/images/Google-Maps-1068x599.png" class="map-img">
-        </div>
-      </div>
     </section>
-  <!--3 boxes-->
+    <!--3 boxes/Information-->
     <section class="boxes-container" id="boxes-container">
-      
-      <div class="box" id="box">
-         <a href="info.html" title="information" class="box-link">
-        <img src="./Assets/images/sign.jpg" alt="trail" class="box-img">
-         <div class="text">
-        <h2>Know before you go</h2>
-        <p> Important information and guidlines for using the trail</p>
-         </a>
-      </div>
-      </div>
-      <div class="box">
-        <a href="info2.html" title="condition" class="box-link">
-        <img src="./assets/images/Hiking-1.jpg" alt="hazard" class="box-img">
-         <div class="text">
-        <h2>Trail best practices</h2>
-        <p>An up-to-date listing of trail conditions and clousers</p>
-         </a>
-         </div>
-      </div>
-      <div class="box">
-        <img src="./Assets/images/th (2).jfif" alt="parking" class="box-img">
-        <div class="text">
-        <h2>Parking and Shuttles</h2>
-        <p>Details about parking, shuttles and transportation along the trail</p>
+        <div class="box" id="box">
+          <a href="info.html" title="information" class="box-link">
+            <img src="./Assets/images/sign.jpg" alt="trail" class="box-img">
+            <div class="text">
+              <h2>Know before you go</h2>
+              <p> Important information and guidlines for using the trail</p>
+            </div>
+          </a>
         </div>
-      </div>
+
+        <div class="box">
+          <a href="info2.html" title="condition" class="box-link">
+            <img src="./assets/images/Hiking-1.jpg" alt="hazard" class="box-img">
+            <div class="text">
+              <h2>Trail best practices</h2>
+              <p>An up-to-date listing of trail conditions and clousers</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+            <img src="./Assets/images/th (2).jfif" alt="parking" class="box-img">
+            <div class="text">
+              <h2>Parking and Shuttles</h2>
+              <p>Details about parking, shuttles and transportation along the trail</p>
+            </div>
+        </div>
     </section>
     <!--<section id="park-info"></section>-->
 
