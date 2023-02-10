@@ -1,60 +1,8 @@
-const api_key= "0JZql2LooCmwKdSlgCcTL1TNSmRyqkyf2yDwKBzE"
-let cityName=document.getElementById('city-input');
-let searchE1= document.getElementById('search-btn');
-
-
-const requestUrl="https://developer.nps.gov/api/v1/parks?parkCode=&stateCode="+ cityName.value + "&api_key=" + api_key;
-
-function findPark(){
-    fetch(requestUrl)  
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data)
-    })
-}
-
-function getData(){
-    
-}
-
-searchE1.addEventListener("click",function(){
-    findPark();
-})
-console.log(searchE1);
-
-
-
-
-
-
-//photos API
-// var clienId = "VdEHKKmqqxAx4RxDgF-oMV9fdq9XsQK70OBycvs5H1Q";
-// var endpoint =
-//   "https://api.unsplash.com/photos/random?client_id=VdEHKKmqqxAx4RxDgF-oMV9fdq9XsQK70OBycvs5H1Q";
-
-// var imageEl = document.querySelector(".adventue-pic");
-// var imageLink = document.getElementById("imglink");
-
-
-// fetch(endpoint)
-// .then(function(response){
-//     return response.json();
-// })
-// .then(function(jsonData){
-//     imageEl.src = jsonData.urls.regular;
-//     imageLink.setAttribute("href", jsonData.links.html);
-// })
-// .catch(function(error){
-//     console.log("error: ",error);
-// });
-
 const api_key = "aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
-let stateName = document.getElementById('city-input'); 
+let stateNameE1 = document.getElementById('city-input'); 
 let searchEl = document.getElementById("mybtn");
 
-const requestURL = 'https://developer.nps.gov/api/v1/parks?parkCode=&stateCode='+ stateName.value +'&api_key=aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR';
+const requestURL = 'https://developer.nps.gov/api/v1/parks?parkCode=&stateCode='+ stateNameE1.value +'&api_key=aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR';
 
 function findPark() {
     fetch(requestURL)
@@ -63,12 +11,13 @@ function findPark() {
     })
     .then(function (data) {
         console.log(data);
+        console.log
     });
 }
 
 searchEl.addEventListener("click", function() {
-    findPark();
+    var stateNameE2 = document.getElementById('city-input').value;
+    findPark(stateNameE1.value);
+    console.log(stateNameE1.value);
 })
 // searchEl.onclick = findPark;
-console.log(searchEl);
-console.log(stateName.value);
