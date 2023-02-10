@@ -18,20 +18,32 @@ function findPark() {
     })
     .then(function (data) {
       console.log(data);
-      var numberParks = data.total;
+      var numberParks = data.data.length;
       console.log(numberParks);
+      
 
       for (var i = 0; i < numberParks; i++) {
-        const parkName = data.data[i].fullName;
+        var parkName = data.data[i].fullName;
         //const parkActivities =(data.data[i].activities[i].name);
         console.log(parkName);
         // console.log(parkActivities);
-        const heading = document.createElement("h1");
-        const activitiesList = document.createElement("ul");
-        heading.innerHTML = parkName;
+        var unorderedList = document.createElement("ol");
+        //const activitiesList = document.createElement("ul");
+        unorderedList.innerHTML = parkName;
         //activitiesList.innerHTML = parkActivities;
-        parkSec.appendChild(heading);
-        parkSec.appendChild(activitiesList);
+        parkSec.appendChild(unorderedList);
+        //parkSec.appendChild(activitiesList);
+        var numberActivities=data.data[i].activities.length
+        console.log(numberActivities);{
+            for (var j=0; j<numberActivities;j++)
+                var activityType=data.data[i].activities[j].name;
+                console.log(activityType);
+                var listItem=document.createElement('li');
+                listItem.innerHTML=activityType;
+                unorderedList.appendChild(listItem);
+        }
+
+
 
        // parkSearch.innerHTML= parkName
       }
@@ -40,9 +52,10 @@ function findPark() {
 }
 //this function is to clear the history every time the user search for a new state
  function clearHistory(){
-var clear = document.getElementById("park-info");
-while (clear.firstChild) {
-  clear.removeChild(clear.lastChild);
+    while (parkSec.firstChild) {
+        //console.log(parkSec.firstChild);
+        //console.log(parkSec.lastChild)
+        parkSec.removeChild(parkSec.lastChild);
 }
  }
 
