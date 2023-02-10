@@ -11,16 +11,21 @@ function findPark() {
     })
     .then(function (data) {
         console.log(data);
-        const parkName =(data.data[0].fullName);
-        const parkActivities =(data.data[0].activities[0].name);
+        var numberParks= data.total
+        console.log(numberParks);
+
+    for (var i=0; i<numberParks; i++){
+        const parkName =(data.data[i].fullName);
+        //const parkActivities =(data.data[i].activities[i].name);
         console.log(parkName);
-        console.log(parkActivities);
+       // console.log(parkActivities);
         const heading = document.createElement('h1');
         const activitiesList = document.createElement('ul');
         heading.innerHTML = parkName;
-        activitiesList.innerHTML = parkActivities;
+        //activitiesList.innerHTML = parkActivities;
         parkSec.appendChild(heading);
         parkSec.appendChild(activitiesList);
+    }
     });
 
 }
