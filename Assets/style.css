@@ -1,29 +1,28 @@
-
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #E3E8E9;
-  font-family: 'Barlow', sans-serif;
+  background-color: var(--bgcolor);
+  font-family: "Barlow", sans-serif;
 }
-
-
-
+:root{
+  --fontcolor:white;
+  --boxbg:rgba(58, 54, 54, 0.6);
+  --bgcolor:#e3e8e9;
+  --position:relative;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-
-
 }
 /*LOGO*/
-.logo{
-    height: 100px;
-    width: 150px;
-border-radius: 50%;
+.logo {
+  height: 100px;
+  width: 120px;
+  border-radius: 50%;
 }
-   
+
 /* Unordered list for navigation bar */
 ul {
   display: flex;
@@ -33,7 +32,7 @@ ul {
   gap: 50px;
   list-style: none;
 }
-.list-link{
+.list-link {
   text-decoration: none;
   cursor: pointer;
   font-size: 25px;
@@ -50,166 +49,177 @@ ul {
   width: 1265px;
   height: 500px;
   opacity: 0.8;
-
 }
 /*the text on the img*/
-.paragraph{
-    display: flex;
-  position: relative;
+.paragraph {
+  display: flex;
+  position:var(--position);
   bottom: 370px;
-  font-size: 30px;  
+  font-size: 30px;
   padding: 20px;
-  line-height:52px;
-  color: white;
-  font-weight:800;
+  line-height: 52px;
+  color: var(--fontcolor);
+  font-weight: 800;
 }
 /*HikR*/
-.strong{
+.strong {
   color: rgb(8, 60, 8);
   font-weight: bold;
 }
-
+/*search state box*/
 .user-input {
-  
   font-size: 20px;
-  background-color: rgba(58, 54, 54, 0.6);
+  background-color: var(--boxbg);
   padding: 1em;
   width: 480px;
   height: 220px;
-  position: relative;
+  position:var(--position);
   bottom: 570px;
   left: 650px;
   border-radius: 30px;
 }
+/*enter your state name...*/
 .user-input .user-title {
-    color: white;
+  color: var(--fontcolor);
   padding: 20px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-
+  font-size: 23px;
 }
+/*input area..the state and it's input*/
 .user-input .input {
   padding: 20px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--fontcolor);
 }
+/*state label*/
 .city {
+  font-size: 23px;
   padding: 10px;
-color: white;
+  color: var(--fontcolor);
 }
+/*input*/
 #city-input {
   border: none;
   outline: none;
-  padding: 10px;
-  color: white;
+  padding: 15px;
+  color: var(--fontcolor);
   border-radius: 20px;
   background: #03030373;
   font-family: inherit;
   font-size: 15px;
 }
-.miles {
-  padding: 10px;
-}
 
-#mile-range {
-  border: none;
-  outline: none;
-  padding: 10px;
-  color: white;
-  border-radius: 20px;
-  background: #03030373;
-  font-family: inherit;
-}
+/*search button*/
 .search-btn {
-  position: relative;
-  left: 190px;
+  position:var(--position);
+  left: 5px;
   margin: 10px;
   border: none;
   outline: none;
-  border-radius: 20px;
+  border-radius: 80px;
   height: 30px;
   width: 100px;
   font-size: 20px;
   background: #03030373;
-  color: white;
-     cursor: pointer;
+  color: var(--fontcolor);
+  cursor: pointer;
 }
-.search-btn:hover{
-border: 3px solid rgb(206, 197, 197);
+.search-btn:hover {
+  border: 3px solid rgb(206, 197, 197);
 }
 /*output container*/
-.output{
-  position: relative;
-  bottom: 400px;
+.output {
+  position:var(--position);
+  top: 250px;
 }
 /*the search result output text*/
-.output .output-txt{
-  background-color: #899e91;
-  width: 700px;
+.output .output-txt {
+  margin-left: 70px;
+  width: 600px;
   height: 550px;
-  position: relative;
+  position:var(--position);
 
   bottom: 68px;
 }
+/*national parks title*/
+.parks {
+  background-color: #899e91;
+  box-shadow: 10px 10px 10px gray;
+  font-size: 25px;
+  color: var(--fontcolor);
+  width: 200px;
+  padding: 10px;
+  border-radius: 20px;
+  position:var(--position);
+  top: 40px;
+}
 /*map img in output section*/
-.map-img{
-width: 600px;
-height: 450px;
-position: relative;
-bottom: 570px;
-left: 650px;
-box-shadow: 10px 10px 10px gray;
-
+.map-img {
+  border-radius: 10px;
+  width: 600px;
+  height: 450px;
+  position:var(--position);
+  bottom: 570px;
+  left: 620px;
+  box-shadow: 10px 10px 10px gray;
+}
+/*where the results will appear*/
+#park-info {
+  font-size: 20px;
+  color: var(--fontcolor);
+  background-color: var(--boxbg);
+  box-shadow: 10px 10px 10px gray;
+  padding: 1em;
+  border-radius: 20px;
+  position:var(--position);
+  top: 50px;
 }
 /*3 boxes container*/
-.boxes-container{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    grid-gap: 20px;
-      position: relative;
+.boxes-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  position:var(--position);
   bottom: 400px;
 }
 /*each box style*/
-.box{
-
-    height: 450px;
-    color: white;
-    border-radius: 8px;
-    position: relative;
-    bottom: 450px;
-    left: 50px;
-    box-shadow: 10px 10px 10px gray;
-    background-color: #899e91;
-
+.box {
+  height: 450px;
+  color: var(--fontcolor);
+  border-radius: 8px;
+  position:var(--position);
+  bottom: 950px;
+  left: 50px;
+  box-shadow: 10px 10px 10px gray;
+  background-color: #899e91;
 }
 /*img inside each box*/
-.box-img{
-    width:365px;
-    height: 200px;
-
+.box-img {
+  width: 365px;
+  height: 200px;
 }
 /*txt inside each box*/
-.box .text{
+.box .text {
   padding: 10px;
-  font-size: 20px;
-  
+  font-size: 25px;
 }
 /*text link in each box*/
-.box-link{
+.box-link {
   text-decoration: none;
-  color: white;
-
+  color: var(--fontcolor);
 }
-.box-link:hover{
+.box-link:hover {
   color: rgb(5, 68, 23);
 }
+
 /*attached html pages*/
-.info-list{
+.info-list {
   display: block;
 }

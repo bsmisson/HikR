@@ -64,7 +64,7 @@
 
     <section class="user-input" id="user-input">
       <!--user input-->
-      <div class="user-title">Enter your city name & clich "Search"</div>
+      <div class="user-title">Enter your  State name & click "Search"</div>
       <div class="input">
         <label for="city" class="city">State</label>
         <select id="city-input">
@@ -126,9 +126,7 @@
           autofocus
           placeholder="Enter your city"
         /> -->
-        <label for="Mile range" class="miles">Miles</label>
-        <input type="number" id="mile-range" size="3" />
-      </div>
+        
       <div>
         <button id="mybtn" class="search-btn">Search</button>
       </div>
@@ -139,8 +137,9 @@
     </section>
     <section class="result-output">
       <div class="output" id="output">
-        <div class="output-txt" id="park-info">
-          parks:
+        <div class="output-txt" >
+          <h1 class="parks">National parks:</h1>
+          <div id="park-info"></div>
         </div>
         <div>
           <img src="./Assets/images/Google-Maps-1068x599.png" class="map-img">
