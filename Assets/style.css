@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
 
 
 }
@@ -49,7 +49,7 @@ ul {
 .adventure-pic {
   width: 1265px;
   height: 500px;
-  opacity: 0.6;
+  opacity: 0.8;
 
 }
 /*the text on the img*/
@@ -176,7 +176,7 @@ border: 3px solid rgb(206, 197, 197);
 
 }
 .box-link:hover{
-  color: rgb(202, 96, 20);
+  color: rgb(5, 68, 23);
 }
 /*attached html pages*/
 .info-list{
