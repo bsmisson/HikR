@@ -1,9 +1,9 @@
 const api_key= "0JZql2LooCmwKdSlgCcTL1TNSmRyqkyf2yDwKBzE"
-let cityName=document.getElementById('city');
-let searchE1= document.getElementById('myBtn');
+let cityName=document.getElementById('city-input');
+let searchE1= document.getElementById('search-btn');
 
 
-const requestUrl="https://developer.nps.gov/api/v1/parks?stateCode="+ cityName.value + "&limit=0&start=50&api_key=" + api_key;
+const requestUrl="https://developer.nps.gov/api/v1/parks?parkCode=&stateCode="+ cityName.value + "&api_key=" + api_key;
 
 function findPark(){
     fetch(requestUrl)  
@@ -13,6 +13,10 @@ function findPark(){
     .then(function(data){
         console.log(data)
     })
+}
+
+function getData(){
+    
 }
 
 searchE1.addEventListener("click",function(){
