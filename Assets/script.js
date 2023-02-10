@@ -39,8 +39,10 @@ function findPark() {
                 var activityType=data.data[i].activities[j].name;
                 console.log(activityType);
                 var listItem=document.createElement('li');
+                listItem.style.fontSize= "15px"
                 listItem.innerHTML=activityType;
                 unorderedList.appendChild(listItem);
+                
         }
 
 
