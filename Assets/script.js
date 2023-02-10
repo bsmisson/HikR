@@ -11,13 +11,15 @@ function findPark() {
     })
     .then(function (data) {
         console.log(data);
-        console.log
+
+        var stateName= data.data[0].states;
+        console.log(stateName)
     });
 }
 
 searchEl.addEventListener("click", function() {
-    var stateNameE2 = document.getElementById('city-input').value;
-    findPark(stateNameE1.value);
-    console.log(stateNameE1.value);
+    stateInput= stateNameE1.value
+    findPark(stateInput);
+    console.log(stateInput);
 })
 // searchEl.onclick = findPark;
