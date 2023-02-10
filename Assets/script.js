@@ -20,12 +20,11 @@
 // });
 
 const api_key = "aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
-let stateName = document.getElementById('city-input'); 
 let searchEl = document.getElementById("mybtn");
-
-const requestURL = 'https://developer.nps.gov/api/v1/parks?parkCode=&stateCode='+ stateName.value +'&api_key=aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR';
+let stateName = document.getElementById('city-input');
 
 function findPark() {
+    const requestURL = 'https://developer.nps.gov/api/v1/parks?parkCode=&stateCode='+ stateName.value +'&api_key=aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR';
     fetch(requestURL)
     .then(function (response) {
         return response.json();
@@ -35,9 +34,10 @@ function findPark() {
     });
 }
 
-searchEl.addEventListener("click", function() {
-    findPark();
+searchEl.addEventListener("click", function() { 
+    const stateName = document.getElementById('city-input').value;
+    findPark(stateName);
+    console.log(stateName);
+
 })
 // searchEl.onclick = findPark;
-console.log(searchEl);
-console.log(stateName.value);
