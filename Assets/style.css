@@ -237,7 +237,7 @@ ul {
   color: rgb(5, 68, 23);
 }
 
-/*attached html pages: info.html, info2.html */
+/***************Attached html pages: info.html, info2.html****************/
 .logo1, .logo2 {
   margin-top: 10px;
   margin-left: 10px;
@@ -259,3 +259,31 @@ ul {
   display: block;
   list-style:disc;
 }
+
+/* Responsive parameters for info pages */
+@media screen and (max-width: 768px) {
+
+  .lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container, .one, .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .info-list {
+    display: flex;
+    flex-wrap: wrap;
+  
+
+  }
+  
+  .bodies, .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+/*********End of html info pages********************/
