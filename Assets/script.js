@@ -35,15 +35,17 @@ function findPark() {
         //parkSec.appendChild(activitiesList);
         var numberActivities=data.data[i].activities.length
         console.log(numberActivities);{
-            for (var j=0; j<numberActivities;j++)
+            for (var j=0; j<numberActivities;j++){
                 var activityType=data.data[i].activities[j].name;
                 console.log(activityType);
                 var listItem=document.createElement('li');
-                listItem.style.fontSize= "15px"
-                listItem.innerHTML=activityType;
+                listItem.style.listStyleType= "disc";
+                listItem.style.fontSize= "15px"                                                     
+                listItem.innerHTML= activityType;
                 unorderedList.appendChild(listItem);
-                
+            }
         }
+
 
 
 
