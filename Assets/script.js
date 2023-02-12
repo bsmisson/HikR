@@ -29,41 +29,39 @@ function findPark() {
         var unorderedList = document.createElement("ol");
         unorderedList.innerHTML = parkName;
         parkSec.appendChild(unorderedList);
-        //var numberActivities=data.data[i].activities.length
-        //console.log(numberActivities);
-            /*for (var j=0; j<numberActivities;j++){
-                var activityType=data.data[i].activities[j].name;
-                console.log(activityType);
-                var listItem=document.createElement('li');
-                listItem.style.fontSize= "15px";
-                listItem.style.textIndent= "24px"                                                     
-                listItem.innerHTML= activityType;
-                unorderedList.appendChild(listItem);
-            }*/
+        /*var numberActivities = data.data[i].activities.length;
+        console.log(numberActivities);
+        for (var j = 0; j < numberActivities; j++) {
+          var activityType = data.data[i].activities[j].name;
+          console.log(activityType);
+          var listItem = document.createElement("li");
+          listItem.style.fontSize = "15px";
+          listItem.style.textIndent = "24px";
+          listItem.innerHTML = activityType;
+          unorderedList.appendChild(listItem);
+        }*/
+        //images loop
+        var demoDiv = document.getElementById("park-info");
+        for (var j = 0; j < data.data[i].images.length; j++) {
+          var linkURL = data.data[i].images[j].url;
+          console.log(linkURL);
+
+          var img = document.createElement("img");
+          img.classList.add("result-img");
+          img.setAttribute("src", linkURL);
+          img.style.width = "200px";
+          img.style.height = "200px";
+          demoDiv.appendChild(img);
         }
+      }
+        });
 
 
 
 
        // parkSearch.innerHTML= parkName
+      }
 
-       //images loop
-        var demoDiv = document.getElementById("park-info");
-       for (var j = 0; j < data.data[i].images.length; j++) {
-    
-         var linkURL = data.data[i].images[j].url;
-         console.log(linkURL);
-         
-         var img = document.createElement("img");
-         img.classList.add("result-img");
-         img.setAttribute("src", linkURL);
-         img.style.width = "200px";
-         img.style.height = "200px";
-         demoDiv.appendChild(img);
-       }
-      })
-      
-    };
   
 
 //this function is to clear the history every time the user search for a new state
