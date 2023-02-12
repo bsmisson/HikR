@@ -46,7 +46,23 @@ function findPark() {
 
 
        // parkSearch.innerHTML= parkName
+
+       //images loop
+        var demoDiv = document.getElementById("park-info");
+       for (var j = 0; j < data.data[i].images.length; j++) {
+    
+         var linkURL = data.data[i].images[j].url;
+         console.log(linkURL);
+         
+         var img = document.createElement("img");
+         img.classList.add("result-img");
+         img.setAttribute("src", linkURL);
+         img.style.width = "200px";
+         img.style.height = "200px";
+         demoDiv.appendChild(img);
+       }
       })
+      
     };
   
 
