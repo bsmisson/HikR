@@ -42,7 +42,7 @@ function findPark() {
         unorderedList.innerHTML = parkName;
         parkSec.appendChild(unorderedList);
         var numberActivities=data.data[i].activities.length
-        console.log(numberActivities);{
+        console.log(numberActivities);
             for (var j=0; j<numberActivities;j++){
                 var activityType=data.data[i].activities[j].name;
                 console.log(activityType);
@@ -58,8 +58,7 @@ function findPark() {
 
 
        // parkSearch.innerHTML= parkName
-      }
-    });
+      });
   
 }
 //this function is to clear the history every time the user search for a new state
