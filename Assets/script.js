@@ -29,9 +29,9 @@ function findPark() {
         var unorderedList = document.createElement("ol");
         unorderedList.innerHTML = parkName;
         parkSec.appendChild(unorderedList);
-        var numberActivities=data.data[i].activities.length
-        console.log(numberActivities);
-            for (var j=0; j<numberActivities;j++){
+        //var numberActivities=data.data[i].activities.length
+        //console.log(numberActivities);
+            /*for (var j=0; j<numberActivities;j++){
                 var activityType=data.data[i].activities[j].name;
                 console.log(activityType);
                 var listItem=document.createElement('li');
@@ -39,7 +39,7 @@ function findPark() {
                 listItem.style.textIndent= "24px"                                                     
                 listItem.innerHTML= activityType;
                 unorderedList.appendChild(listItem);
-            }
+            }*/
         }
 
 
