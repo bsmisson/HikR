@@ -46,7 +46,8 @@ function findPark() {
 
 
        // parkSearch.innerHTML= parkName
-      });
+      }
+    });
   
 }
 //this function is to clear the history every time the user search for a new state
