@@ -5,27 +5,34 @@ body {
   background-color: var(--bgcolor);
   font-family: "Barlow", sans-serif;
 }
+
+/* Variables */
 :root{
   --fontcolor:white;
   --boxbg:rgba(58, 54, 54, 0.6);
   --bgcolor:#e3e8e9;
   --position:relative;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 /*LOGO*/
 .logo {
-  height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  height: 120px;
   width: 120px;
   border-radius: 50%;
 }
 
 
 /* Unordered list for navigation bar */
-ul {
+.navBar {
   display: flex;
   list-style-type: none;
   padding-right: 50px;
@@ -51,6 +58,7 @@ ul {
   height: 500px;
   opacity: 0.8;
 }
+
 /*the text on the img*/
 .paragraph {
   display: flex;
@@ -79,6 +87,7 @@ ul {
   left: 650px;
   border-radius: 30px;
 }
+
 /*enter your state name...*/
 .user-input .user-title {
   color: var(--fontcolor);
@@ -89,6 +98,7 @@ ul {
   align-items: center;
   font-size: 23px;
 }
+
 /*input area..the state and it's input*/
 .user-input .input {
   padding: 20px;
@@ -98,12 +108,14 @@ ul {
   align-items: center;
   color: var(--fontcolor);
 }
+
 /*state label*/
 .city {
   font-size: 23px;
   padding: 10px;
   color: var(--fontcolor);
 }
+
 /*input*/
 #city-input {
   border: none;
@@ -134,11 +146,13 @@ ul {
 .search-btn:hover {
   border: 3px solid rgb(206, 197, 197);
 }
+
 /*output container*/
 .output {
   position:var(--position);
   top: 250px;
 }
+
 /*the search result output text*/
 .output .output-txt {
   margin-left: 70px;
@@ -148,6 +162,7 @@ ul {
 
   bottom: 68px;
 }
+
 /*national parks title*/
 .parks {
   background-color: #899e91;
@@ -170,6 +185,7 @@ ul {
   left: 620px;
   box-shadow: 10px 10px 10px gray;
 }
+
 /*where the results will appear*/
 #park-info {
   font-size: 20px;
@@ -181,6 +197,7 @@ ul {
   position:var(--position);
   top: 50px;
 }
+
 /*3 boxes container*/
 .boxes-container {
   width: 90%;
@@ -211,6 +228,7 @@ ul {
   padding: 10px;
   font-size: 25px;
 }
+
 /*text link in each box*/
 .box-link {
   text-decoration: none;
@@ -220,7 +238,79 @@ ul {
   color: rgb(5, 68, 23);
 }
 
-/*attached html pages*/
-.info-list {
-  display: block;
+/*******************html pages: info.html, info2.html*************************/
+.logo1, .logo2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
+
+/*navigation bar parameters for info and info2 html files*/
+#uList {
+  display: flex;
+  list-style-type: none;
+  padding-right: 30px;
+  min-width: 400px;
+  gap: 50px;
+  list-style: none;
+}
+
+/* Main content style for info, info2 pages */
+.container, .container2 {
+  padding-top: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(41, 78, 41);
+}
+
+.h1, .h3, .p {
+  margin-left: 1rem;
+}
+
+/* Unordered list style for info, info2 pages*/
+.info-list {
+  display: flex;
+  flex-direction: column;
+  list-style:disc;
+  line-height: 160%;
+}
+
+/* Responsive parameters for info pages */
+@media screen and (max-width: 948px) {
+  .bodies, .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container, .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .h1, h3, .p {
+    display: flex;
+  text-align: center;
+  }
+  .info-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#maincontainer{
+  background-color:black;
+  width:500px;
+  height:200px;
+}
+.tablecontainer{
+  background-color:black;
+  width:500px;
+  height:200px;
+}
+/**************************End of html info pages***********************************/
