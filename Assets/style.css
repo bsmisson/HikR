@@ -30,6 +30,7 @@ header {
   border-radius: 50%;
 }
 
+
 /* Unordered list for navigation bar */
 .navBar {
   display: flex;
@@ -301,5 +302,15 @@ header {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+#maincontainer{
+  background-color:black;
+  width:500px;
+  height:200px;
+}
+.tablecontainer{
+  background-color:black;
+  width:500px;
+  height:200px;
 }
 /**************************End of html info pages***********************************/
