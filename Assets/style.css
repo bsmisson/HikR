@@ -31,7 +31,7 @@ header {
 }
 
 /* Unordered list for navigation bar */
-ul {
+.navBar {
   display: flex;
   list-style-type: none;
   padding-right: 50px;
@@ -237,7 +237,7 @@ ul {
   color: rgb(5, 68, 23);
 }
 
-/***************Attached html pages: info.html, info2.html****************/
+/*******************html pages: info.html, info2.html*************************/
 .logo1, .logo2 {
   margin-top: 10px;
   margin-left: 10px;
@@ -246,44 +246,60 @@ ul {
   border-radius: 50%;
 }
 
+/*navigation bar parameters for info and info2 html files*/
+#uList {
+  display: flex;
+  list-style-type: none;
+  padding-right: 30px;
+  min-width: 400px;
+  gap: 50px;
+  list-style: none;
+}
+
 /* Main content style for info, info2 pages */
 .container, .container2 {
   padding-top: 10px;
-  padding-left: 20px;
   font-family:Arial, Helvetica, sans-serif;
   color: rgb(41, 78, 41);
 }
 
+.h1, .h3, .p {
+  margin-left: 1rem;
+}
+
 /* Unordered list style for info, info2 pages*/
 .info-list {
-  display: block;
+  display: flex;
+  flex-direction: column;
   list-style:disc;
+  line-height: 160%;
 }
 
 /* Responsive parameters for info pages */
-@media screen and (max-width: 768px) {
-
-  .lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .container, .one, .container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .info-list {
-    display: flex;
-    flex-wrap: wrap;
-  
-
-  }
-  
+@media screen and (max-width: 948px) {
   .bodies, .head {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  .lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container, .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .h1, h3, .p {
+    display: flex;
+  text-align: center;
+  }
+  .info-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
-/*********End of html info pages********************/
+/**************************End of html info pages***********************************/
