@@ -4,18 +4,6 @@ let searchEl = document.getElementById("mybtn");
 let stateName = document.getElementById('city-input');
 let parkSec = document.getElementById('park-info');
 
-function getMaps(){
-    var requestURL= "https://maps.googleapis.com/maps/api/js?key=" + googleApi_key+ "&callback=initMap";
-    fetch(requestURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-             console.log(data);
-    }
-    )}
-
-
 
 function findPark() {
     
@@ -77,4 +65,3 @@ searchEl.addEventListener("click", function() {
   console.log(stateName);
 })
 // searchEl.onclick = findPark;
-getMaps();
