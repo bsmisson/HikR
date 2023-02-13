@@ -5,9 +5,9 @@ let parkSec = document.getElementById('park-info');
 
 
 function findPark() {
-    
+
   clearHistory()
-   
+
   var requestURL =
     "https://developer.nps.gov/api/v1/parks?parkCode=&stateCode=" +
     stateName.value +
@@ -20,22 +20,25 @@ function findPark() {
       console.log(data);
       var numberParks = data.data.length;
       console.log(numberParks);
-      
 
+      
       for (var i = 0; i < numberParks; i++) {
+        var parkDiv =  document.createElement('div')
+        var container1 = document.createElement("div");
+        var container2 = document.createElement("div");
+        var container3 = document.createElement("div");
+        container1.classList.add('containerItem')
+        container2.classList.add('containerImages')
+        parkDiv.classList.add('parksContainer')
+
         var parkName = data.data[i].fullName;
         console.log(parkName);
+        var parkNameEl = document.createElement('h2')
         var unorderedList = document.createElement("ol");
-        //$('ol').attr('id', 'ol-'+i)
-        unorderedList.innerHTML = parkName;
-        parkSec.appendChild(unorderedList);
-      }
-
+        parkNameEl.textContent = parkName;
         
-      function showActivities(){
-        for (var i = 0; i < numberParks; i++) {
-          var numberActivities = data.data[i].activities.length;
-       for (var j = 0; j < numberActivities; j++) {
+        var numberActivities = data.data[i].activities.length;
+        for (var j = 0; j < numberActivities; j++) {
           var activityType = data.data[i].activities[j].name;
           console.log(activityType);
           var listItem = document.createElement("li");
@@ -48,67 +51,75 @@ function findPark() {
     }
       function showParkImages(){
         //images loop
-        var demoDiv = document.getElementById("park-info");
-        for (var i = 0; i < numberParks; i++) {
-          for (var j = 0; j < data.data[i].images.length; j++) {
+        // var parkSec = document.getElementById("park-info");
+        for (var j = 0; j < data.data[i].images.length; j++) {
           var linkURL = data.data[i].images[j].url;
           console.log(linkURL);
-
+          
           var img = document.createElement("img");
           img.classList.add("result-img");
           img.setAttribute("src", linkURL);
           img.style.width = "200px";
           img.style.height = "200px";
-          demoDiv.appendChild(img);
+          container2.appendChild(img);
         }
-      }
-    }
-
-      function showParkDirections() {
+        container1.append(parkNameEl, container2, unorderedList);
         //park directions
-        for (var i = 0; i < numberParks; i++) {
-          var parkDirection = data.data[i].directionsInfo;
-          console.log(parkDirection);
+        var parkDirection = data.data[i].directionsInfo;
+        console.log(parkDirection);
+        
+        var directions = document.createElement("p");
+        directions.style.fontSize = "15px";
+        directions.style.textIndent = "24px";
+        directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
+        // parkSec.appendChild(directions);
+        // added park fees
+        var parkFee = data.data[i].entranceFees[0].cost;
+        console.log(parkFee);
+        var fee = document.createElement("p");
+        fee.style.fontSize = "15px";
+        fee.style.textIndent = "24px";
+        fee.innerHTML = `<strong> Park Fees </strong> </br> ${parkFee}`;
+        // parkSec.appendChild(fee);
+        // added addresses
+        var parkAddress1 = data.data[i].addresses[0].line2;
+        var parkAddress2 = data.data[i].addresses[0].postalCode;
+        console.log(parkAddress1, parkAddress2);
+        var address = document.createElement("p");
+        address.style.fontSize = "15px";
+        address.style.textIndent = "24px";
+        address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress1}</br> ${parkAddress2}`;
+        // parkSec.appendChild(address);
+        container3.append(directions, fee, address)
 
-          var directions = document.createElement("p");
-          directions.style.fontSize = "15px";
-          directions.style.textIndent = "24px";
-          directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
-          parkSec.appendChild(directions);
-        }
+        parkDiv.append(container1,  container3)
+        parkSec.append(parkDiv)
       }
-      
-      
-    //for (var i=0;)
-      $( 'ol' ).click(function() {
-        showActivities();
-        showParkDirections();
-        showParkImages();
-      });
-    
-        });
+    });
 
 
 
 
-       // parkSearch.innerHTML= parkName
-      }
+  // parkSearch.innerHTML= parkName
+}
 
-  
+
 
 //this function is to clear the history every time the user search for a new state
- function clearHistory(){
-    while (parkSec.firstChild) {
-        //console.log(parkSec.firstChild);
-        //console.log(parkSec.lastChild)
-        parkSec.removeChild(parkSec.lastChild);
+function clearHistory() {
+  while (parkSec.firstChild) {
+    //console.log(parkSec.firstChild);
+    //console.log(parkSec.lastChild)
+    parkSec.removeChild(parkSec.lastChild);
+  }
 }
- }
 
 
-searchEl.addEventListener("click", function() {
+searchEl.addEventListener("click", function () {
   const stateName = document.getElementById("city-input").value;
   findPark(stateName);
   console.log(stateName);
 })
 // searchEl.onclick = findPark;
+
+
