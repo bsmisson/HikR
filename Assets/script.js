@@ -41,11 +41,11 @@ function findPark() {
         for (var j = 0; j < numberActivities; j++) {
           var activityType = data.data[i].activities[j].name;
           console.log(activityType);
-          var listItem = document.createElement("li");
+          var listItem = document.createElement("p");
+          listItem.textContent = `${activityType}`;
           listItem.style.fontSize = "15px";
           listItem.style.textIndent = "24px";
-          listItem.innerHTML = activityType;
-          unorderedList.appendChild(listItem);
+          container3.append(listItem);
         }
         //images loop
         // var parkSec = document.getElementById("park-info");
@@ -79,22 +79,32 @@ function findPark() {
         fee.innerHTML = `<strong> Park Fees </strong> </br> ${parkFee}`;
         // parkSec.appendChild(fee);
         // added addresses
+        var parkAddress0 = data.data[i].addresses[0].line1;
         var parkAddress1 = data.data[i].addresses[0].line2;
         var parkAddress2 = data.data[i].addresses[0].postalCode;
+        var parkAddress3 = data.data[i].addresses[0].stateCode;
         console.log(parkAddress1, parkAddress2);
         var address = document.createElement("p");
         address.style.fontSize = "15px";
         address.style.textIndent = "24px";
-        address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress1}</br> ${parkAddress2}`;
+        address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress0} ${parkAddress1}</br> ${parkAddress3} ${parkAddress2}`;
         // parkSec.appendChild(address);
         container3.append(directions, fee, address)
 
+        var parkLat = data.data[i].latitude;
+        var parkLong = data.data[i].longitude;
+        console.log(parkLat, parkLong);
+        
         parkDiv.append(container1,  container3)
         parkSec.append(parkDiv)
+
+        weatherapi = "https://api.openweathermap.org/data/2.5/onecall?lat=" + parkLat + "&lon=" + parkLong + "&exclude=&appid=21d47407360625ced584e99e4dbc0da8";
+
+        
+        
       }
     });
-
-
+    
 
 
   // parkSearch.innerHTML= parkName
