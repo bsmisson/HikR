@@ -1,5 +1,4 @@
 const api_key = "aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
-const googleApi_key= "AIzaSyAp_D9dzwfAO2zPUbuoIjKutKpsxM-JtdI"
 let searchEl = document.getElementById("mybtn");
 let stateName = document.getElementById('city-input');
 let parkSec = document.getElementById('park-info');
@@ -29,9 +28,6 @@ function findPark() {
         var unorderedList = document.createElement("ol");
         unorderedList.innerHTML = parkName;
         parkSec.appendChild(unorderedList);
-
-      }
-      function getActivities(){
         var numberActivities = data.data[i].activities.length;
         for (var j = 0; j < numberActivities; j++) {
           var activityType = data.data[i].activities[j].name;
