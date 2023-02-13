@@ -55,6 +55,15 @@ function findPark() {
           img.style.height = "200px";
           demoDiv.appendChild(img);
         }
+        //park directions
+          var parkDirection = data.data[i].directionsInfo;
+          console.log(parkDirection);
+
+          var directions = document.createElement("p");
+          directions.style.fontSize = "15px";
+          directions.style.textIndent = "24px";
+          directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
+          parkSec.appendChild(directions);
       }
         });
 
