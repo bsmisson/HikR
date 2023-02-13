@@ -207,6 +207,7 @@ header {
   bottom: 400px;
 }
 /*each box style*/
+
 .box {
   height: 450px;
   color: var(--fontcolor);
