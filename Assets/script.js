@@ -60,8 +60,26 @@ function findPark() {
           directions.style.textIndent = "24px";
           directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
           parkSec.appendChild(directions);
+// added park fees
+          var parkFee = data.data[i].entranceFees[0].cost;
+          console.log(parkFee);
+          var fee = document.createElement("p");
+          fee.style.fontSize = "15px";
+          fee.style.textIndent ="24px";
+          fee.innerHTML = `<strong> Park Fees </strong> </br> ${parkFee}`;
+          parkSec.appendChild(fee);
+// added addresses
+          var parkAddress = data.data[i].addresses[i].line2;
+          console.log(parkAddress);
+          var address = document.createElement("p");
+          address.style.fontSize = "15px";
+          address.style.textIndent ="24px";
+          address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress}`;
+          parkSec.appendChild(address);
+          
       }
         });
+        
 
 
 
@@ -87,3 +105,5 @@ searchEl.addEventListener("click", function() {
   console.log(stateName);
 })
 // searchEl.onclick = findPark;
+
+
