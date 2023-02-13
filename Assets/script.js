@@ -29,8 +29,10 @@ function findPark() {
         var unorderedList = document.createElement("ol");
         unorderedList.innerHTML = parkName;
         parkSec.appendChild(unorderedList);
-        /*var numberActivities = data.data[i].activities.length;
-        console.log(numberActivities);
+
+      }
+      function getActivities(){
+        var numberActivities = data.data[i].activities.length;
         for (var j = 0; j < numberActivities; j++) {
           var activityType = data.data[i].activities[j].name;
           console.log(activityType);
@@ -39,7 +41,7 @@ function findPark() {
           listItem.style.textIndent = "24px";
           listItem.innerHTML = activityType;
           unorderedList.appendChild(listItem);
-        }*/
+        }
         //images loop
         var demoDiv = document.getElementById("park-info");
         for (var j = 0; j < data.data[i].images.length; j++) {
