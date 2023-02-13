@@ -26,10 +26,16 @@ function findPark() {
         var parkName = data.data[i].fullName;
         console.log(parkName);
         var unorderedList = document.createElement("ol");
+        //$('ol').attr('id', 'ol-'+i)
         unorderedList.innerHTML = parkName;
         parkSec.appendChild(unorderedList);
-        var numberActivities = data.data[i].activities.length;
-        for (var j = 0; j < numberActivities; j++) {
+      }
+
+        
+      function showActivities(){
+        for (var i = 0; i < numberParks; i++) {
+          var numberActivities = data.data[i].activities.length;
+       for (var j = 0; j < numberActivities; j++) {
           var activityType = data.data[i].activities[j].name;
           console.log(activityType);
           var listItem = document.createElement("li");
@@ -38,9 +44,13 @@ function findPark() {
           listItem.innerHTML = activityType;
           unorderedList.appendChild(listItem);
         }
+      }
+    }
+      function showParkImages(){
         //images loop
         var demoDiv = document.getElementById("park-info");
-        for (var j = 0; j < data.data[i].images.length; j++) {
+        for (var i = 0; i < numberParks; i++) {
+          for (var j = 0; j < data.data[i].images.length; j++) {
           var linkURL = data.data[i].images[j].url;
           console.log(linkURL);
 
@@ -51,7 +61,12 @@ function findPark() {
           img.style.height = "200px";
           demoDiv.appendChild(img);
         }
+      }
+    }
+
+      function showParkDirections() {
         //park directions
+        for (var i = 0; i < numberParks; i++) {
           var parkDirection = data.data[i].directionsInfo;
           console.log(parkDirection);
 
@@ -60,7 +75,17 @@ function findPark() {
           directions.style.textIndent = "24px";
           directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
           parkSec.appendChild(directions);
+        }
       }
+      
+      
+    //for (var i=0;)
+      $( 'ol' ).click(function() {
+        showActivities();
+        showParkDirections();
+        showParkImages();
+      });
+    
         });
 
 
