@@ -229,31 +229,6 @@ header {
   bottom: 400px;
 }
 
-/*responsive design for search state box*/
-
-@media screen and (min-width: 768px) {
-  .box-container > * {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .box-container > * {
-    flex-basis: calc(33.33% - 20px);
-  }
-}
-/*boxes*/
-@media (max-width: 768px) {
-  .boxes-container {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .boxes-container {
-    padding: 5px;
-  }
-}
 
 /*each box style*/
 
@@ -331,37 +306,12 @@ h4 {
   margin: 2em;
 }
 
-/* Unordered list style for info, info2 pages*/
+/* Unordered list style for info, info2, info3 pages*/
 .info-list {
   display: flex;
   flex-direction: column;
   list-style: disc;
   line-height: 160%;
-}
-
-/*info3*/
-
-@media screen and (max-width: 948px) {
-  .bodies,
-  .newnav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .logo {
-    display: flex;
-  }
-  .box-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .box-container > * {
-    flex: 1 1 100%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
 }
 
 /*"BLAZE YOUR NEXT TRAIL*/
@@ -385,6 +335,266 @@ footer {
   margin-bottom: 40px;
   width: 500px;
 }
+/*responsive for index.html*/
+@media (min-width:576px) and (max-width: 768px) {
+  body,
+  .navBar {
+    display: flex;
+   
+    gap: 10px;
+    padding-right: 10px;
+    
+  }
+.list-link{
+  font-size: 20px;
+  
+}
+  .logo {
+    display: block;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+  
+  }
+  .user-input {
+  width: 200px;
+  height: 200px;
+  position: var(--position);
+  bottom: 450px;
+  left: 20px;
+ 
+}
+.user-input .user-title {
+ 
+  padding: 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+/*input area..the state and it's input*/
+.user-input .input {
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+}
+
+/*state label*/
+.city {
+ display: none;
+
+}
+
+/*input*/
+#city-input {
+ position: relative;
+ bottom: 90px;
+ left: 30px;
+  padding: 10px;
+ 
+}
+
+/*search button*/
+.search-btn {
+  position: var(--position);
+  bottom: -15px;
+  left: -90px;
+  width: 50px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.paragraph {
+  display: flex;
+  bottom: 500px;
+  font-size: 30px;
+  padding: 10px;
+  line-height: 45px;
+
+ 
+}
+.boxes-container {
+
+
+  grid-gap: 10px;
+  position: var(--position);
+  bottom: -80px;
+  right: 50px;
+}
+.box{
+  height:400px;
+  width: 450px;
+}
+  .box-link {
+font-size: 20px;
+  }
+  .box-img{
+  margin: auto;
+  }
+  .map-img{
+    display: none;
+  }
+  .output-txt{
+    position: relative;
+    left: -60px;
+   top: 650px;
+    width: 300px;
+  }
+  .parks{
+    width: 150px;
+    font-size: 20px;
+  }
+  #park-info{
+    width: 220px;
+  }
+
+}
+@media screen and (max-width: 576px) {
+  body,
+  .navBar {
+    display: flex;
+   
+    gap: 10px;
+    padding-right: 10px;
+    
+  }
+.list-link{
+  font-size: 20px;
+  
+}
+  .logo {
+    display: block;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+  
+  }
+  .user-input {
+  width: 200px;
+  height: 200px;
+  position: var(--position);
+  bottom: 450px;
+  left: 20px;
+ 
+}
+.user-input .user-title {
+ 
+  padding: 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+/*input area..the state and it's input*/
+.user-input .input {
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+}
+
+/*state label*/
+.city {
+ display: none;
+
+}
+
+/*input*/
+#city-input {
+ position: relative;
+ bottom: 90px;
+ left: 30px;
+  padding: 10px;
+ 
+}
+
+/*search button*/
+.search-btn {
+  position: var(--position);
+  bottom: -15px;
+  left: -90px;
+  width: 50px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.paragraph {
+  display: flex;
+  bottom: 500px;
+  font-size: 30px;
+  padding: 10px;
+  line-height: 45px;
+
+ 
+}
+.boxes-container {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  position: var(--position);
+  bottom: -80px;
+  right: 50px;
+}
+.box{
+  height:400px;
+  width: 450px;
+}
+  .box-link {
+font-size: 20px;
+  }
+  .box-img{
+  margin: auto;
+  }
+  .map-img{
+    display: none;
+  }
+  .output-txt{
+    position: relative;
+    left: -60px;
+   top: 650px;
+    width: 300px;
+  }
+  .parks{
+    width: 150px;
+    font-size: 20px;
+  }
+  #park-info{
+    width: 220px;
+  }
+
+}
+
+/*boxes
+@media (max-width: 768px) {
+  .boxes-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxes-container {
+    padding: 5px;
+  }
+}
+/*responsive design for search state box
+
+@media screen and (min-width: 768px) {
+  .box-container > * {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .box-container > * {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+
+
+
 /* Responsive parameters for info pages */
 @media screen and (max-width: 948px) {
   .bodies,
@@ -430,3 +640,29 @@ footer {
   display:none
 }
 /**************************End of html info pages***********************************/
+/* vl 1/31: added mediaqueries and merged from css2
+/************ Large Devices ************************/
+/* Large  devices (screens above Medium size)      
+.card{
+  border:1px solid black; 
+  min-height:200px;
+  max-height:200px;  }
+
+
+/************ Medium Devices ************************/
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (max-width: 768px) {
+  .valign-wrapper {
+    display: inline-block;
+  }
+
+  
+
+    .card{
+      border:1px solid black; 
+      min-height:200px;
+      max-height:200px;      
+    }
+    
+} 
+
