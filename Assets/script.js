@@ -30,7 +30,10 @@ function findPark() {
         var container4 = document.createElement("div")
         container1.classList.add('containerItem')
         container2.classList.add('containerImages')
+        container3.classList.add('containerItem')
         parkDiv.classList.add('parksContainer')
+        container2.style.display='none';
+        container3.style.display='none';
 
         var parkName = data.data[i].fullName;
         console.log(parkName);
@@ -107,7 +110,16 @@ function findPark() {
         
         parkDiv.append(container1, container3, container4)
         parkSec.append(parkDiv)
-        
+
+        parkNameEl.addEventListener("click",function(event){
+          var target1=event.target.parentNode.children[1]
+          var target2=event.target.parentNode.nextElementSibling
+          target1.style.display='flex';
+          target2.style.display='initial';
+        })
+
+         
+
 
         weatherapi = "https://api.openweathermap.org/data/2.5/onecall?lat=" + parkLat + "&lon=" + parkLong + "&exclude=&appid=21d47407360625ced584e99e4dbc0da8";
 
