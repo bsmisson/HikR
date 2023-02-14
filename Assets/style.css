@@ -181,6 +181,7 @@ header {
 }
 /*map img in output section*/
 .map-img {
+  
   border-radius: 10px;
   width: 600px;
   height: 450px;
@@ -213,9 +214,6 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.containerInfo{
-  display:block
-}
 .containerImages {
   display: flex;
   flex-wrap: wrap;
@@ -247,7 +245,7 @@ header {
 }
 /*img inside each box*/
 .box-img {
-  display:none;
+
   width: 365px;
   height: 200px;
 }
@@ -642,13 +640,7 @@ font-size: 20px;
   height: 200px;
 }
 .hidden{
-  display:none;
-}
-.parkNames:hover{
-  background-color: bisque;
-}
-.audioNames:hover{
-  background-color: bisque;
+  display:none
 }
 /**************************End of html info pages***********************************/
 /* vl 1/31: added mediaqueries and merged from css2
