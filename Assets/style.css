@@ -4,14 +4,17 @@ body {
   padding: 0;
   background-color: var(--bgcolor);
   font-family: "Barlow", sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Variables */
-:root{
-  --fontcolor:white;
-  --boxbg:rgba(58, 54, 54, 0.6);
-  --bgcolor:#e3e8e9;
-  --position:relative;
+:root {
+  --fontcolor: white;
+  --boxbg: rgba(58, 54, 54, 0.6);
+  --bgcolor: #e3e8e9;
+  --position: relative;
 }
 
 header {
@@ -25,11 +28,10 @@ header {
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
-  height: 120px;
-  width: 120px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
 }
-
 
 /* Unordered list for navigation bar */
 .navBar {
@@ -62,7 +64,7 @@ header {
 /*the text on the img*/
 .paragraph {
   display: flex;
-  position:var(--position);
+  position: var(--position);
   bottom: 370px;
   font-size: 30px;
   padding: 20px;
@@ -82,14 +84,12 @@ header {
   padding: 1em;
   width: 480px;
   height: 220px;
-  position:var(--position);
+  position: var(--position);
   bottom: 570px;
   left: 650px;
   border-radius: 30px;
 }
 /*responsive design for search state box*/
-
-
 
 @media screen and (min-width: 768px) {
   .box-container > * {
@@ -145,7 +145,7 @@ header {
 
 /*search button*/
 .search-btn {
-  position:var(--position);
+  position: var(--position);
   left: 5px;
   margin: 10px;
   border: none;
@@ -164,7 +164,7 @@ header {
 
 /*output container*/
 .output {
-  position:var(--position);
+  position: var(--position);
   top: 250px;
 }
 
@@ -173,7 +173,7 @@ header {
   margin-left: 70px;
   width: 600px;
   height: 550px;
-  position:var(--position);
+  position: var(--position);
 
   bottom: 68px;
 }
@@ -187,7 +187,7 @@ header {
   width: 200px;
   padding: 10px;
   border-radius: 20px;
-  position:var(--position);
+  position: var(--position);
   top: 40px;
 }
 /*map img in output section*/
@@ -195,7 +195,7 @@ header {
   border-radius: 10px;
   width: 600px;
   height: 450px;
-  position:var(--position);
+  position: var(--position);
   bottom: 570px;
   left: 620px;
   box-shadow: 10px 10px 10px gray;
@@ -209,7 +209,7 @@ header {
   box-shadow: 10px 10px 10px gray;
   padding: 1em;
   border-radius: 20px;
-  position:var(--position);
+  position: var(--position);
   top: 50px;
 }
 .parksContainer {
@@ -224,7 +224,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.containerImages{
+.containerImages {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -236,9 +236,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
-  position:var(--position);
+  position: var(--position);
   bottom: 400px;
-
 }
 
 @media (max-width: 768px) {
@@ -259,7 +258,7 @@ header {
   height: 450px;
   color: var(--fontcolor);
   border-radius: 8px;
-  position:var(--position);
+  position: var(--position);
   bottom: 950px;
   left: 50px;
   box-shadow: 10px 10px 10px gray;
@@ -276,7 +275,7 @@ header {
   font-size: 25px;
 }
 /*box title*/
-.box-title{
+.box-title {
   font-size: 30px;
   font-weight: bold;
 }
@@ -291,7 +290,8 @@ header {
 }
 
 /*******************html pages: info.html, info2.html*************************/
-.logo1, .logo2 {
+.logo1,
+.logo2 {
   margin-top: 10px;
   margin-left: 10px;
   height: 150px;
@@ -300,8 +300,8 @@ header {
 }
 
 /*navigation bar parameters for info and info2 html files*/
-#uList, .navBar {
-
+#uList,
+.navBar {
   display: flex;
   list-style-type: none;
   padding-right: 30px;
@@ -311,17 +311,20 @@ header {
 }
 
 /* Main content style for info, info2 pages */
-.container, .container2, .container3 {
+.container,
+.container2,
+.container3 {
   padding-top: 10px;
   font-size: 20px;
   color: rgb(41, 78, 41);
 }
 
-.h1, .h3, .p {
- text-align: center;
-
+.h1,
+.h3,
+.p {
+  text-align: center;
 }
-h4{
+h4 {
   margin: 2em;
 }
 
@@ -329,62 +332,60 @@ h4{
 .info-list {
   display: flex;
   flex-direction: column;
-  list-style:disc;
+  list-style: disc;
   line-height: 160%;
 }
 
 /*info3*/
 
 @media screen and (max-width: 948px) {
-  .bodies, .newnav {
+  .bodies,
+  .newnav {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
- 
-.logo {
-  display: flex;
+
+  .logo {
+    display: flex;
+  }
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box-container > * {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
 }
-.box-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.box-container > * {
-  flex: 1 1 100%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-
-
-}
-
 
 /*"BLAZE YOUR NEXT TRAIL*/
-.bottom-text {
-  position: absolute !important;
+footer {
+  position: fixed;
+  bottom: 0px;
+
   bottom: 100 !important;
   left: 0 !important;
-  background-color:#899e91!important;
+  background-color: #899e91 !important;
   padding: 10px !important;
   text-align: center !important;
   width: 100% !important;
-    }
+}
 
-
-.info3-img, .info1-img{
- display: block;
+.info3-img,
+.info1-img {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
   width: 500px;
-
- 
 }
 /* Responsive parameters for info pages */
 @media screen and (max-width: 948px) {
-  .bodies, .head {
+  .bodies,
+  .head {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -394,14 +395,17 @@ h4{
     flex-wrap: wrap;
     justify-content: center;
   }
-  .container, .container2 {
+  .container,
+  .container2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .h1, h3, .p {
+  .h1,
+  h3,
+  .p {
     display: flex;
-  text-align: center;
+    text-align: center;
   }
   .info-list {
     display: flex;
@@ -409,14 +413,14 @@ h4{
     justify-content: center;
   }
 }
-#maincontainer{
-  background-color:black;
-  width:500px;
-  height:200px;
+#maincontainer {
+  background-color: black;
+  width: 500px;
+  height: 200px;
 }
-.tablecontainer{
-  background-color:black;
-  width:500px;
-  height:200px;
+.tablecontainer {
+  background-color: black;
+  width: 500px;
+  height: 200px;
 }
 /**************************End of html info pages***********************************/
