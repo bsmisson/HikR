@@ -30,14 +30,17 @@ function findPark() {
         var container4 = document.createElement("div")
         container1.classList.add('containerItem')
         container2.classList.add('containerImages')
-        container3.classList.add('containerItem')
+        container3.classList.add('containerInfo')
+        container2.classList.add('hidden');
+        container3.classList.add('hidden');
         parkDiv.classList.add('parksContainer')
-        container2.style.display='none';
-        container3.style.display='none';
+        //container2.style.display='none';
+        //container3.style.display='none';
 
         var parkName = data.data[i].fullName;
         console.log(parkName);
         var parkNameEl = document.createElement('h2')
+        parkNameEl.classList.add('parkNames');
         var unorderedList = document.createElement("ol");
         parkNameEl.textContent = parkName;
         
@@ -114,8 +117,10 @@ function findPark() {
         parkNameEl.addEventListener("click",function(event){
           var target1=event.target.parentNode.children[1]
           var target2=event.target.parentNode.nextElementSibling
-          target1.style.display='flex';
-          target2.style.display='initial';
+          target1.classList.toggle('hidden');
+          target2.classList.toggle('hidden');
+         
+       
         })
 
          
