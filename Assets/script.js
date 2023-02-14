@@ -30,7 +30,10 @@ function findPark() {
         var container4 = document.createElement("div")
         container1.classList.add('containerItem')
         container2.classList.add('containerImages')
+        container3.classList.add('containerItem')
         parkDiv.classList.add('parksContainer')
+        container2.style.display='none';
+        container3.style.display='none';
 
         var parkName = data.data[i].fullName;
         console.log(parkName);
@@ -62,6 +65,9 @@ function findPark() {
           container2.appendChild(img);
         }
         container1.append(parkNameEl, container2, unorderedList);
+        parkDiv.append(container1,  container3)
+        parkSec.append(parkDiv)
+      
         //park directions
         var parkDirection = data.data[i].directionsInfo;
         console.log(parkDirection);
@@ -98,13 +104,22 @@ function findPark() {
         address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress0} ${parkAddress1}</br> ${parkAddress3} ${parkAddress2}`;
         // parkSec.appendChild(address);
         container3.append(directions, fee, address)
-
         var parkLat = data.data[i].latitude;
         var parkLong = data.data[i].longitude;
         console.log(parkLat, parkLong);
         
         parkDiv.append(container1, container3, container4)
         parkSec.append(parkDiv)
+
+        parkNameEl.addEventListener("click",function(event){
+          var target1=event.target.parentNode.children[1]
+          var target2=event.target.parentNode.nextElementSibling
+          target1.style.display='flex';
+          target2.style.display='initial';
+        })
+
+         
+
 
         weatherapi = "https://api.openweathermap.org/data/2.5/onecall?lat=" + parkLat + "&lon=" + parkLong + "&exclude=&appid=21d47407360625ced584e99e4dbc0da8";
 
@@ -136,5 +151,3 @@ searchEl.addEventListener("click", function () {
   console.log(stateName);
 })
 // searchEl.onclick = findPark;
-
-
