@@ -213,6 +213,9 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.containerInfo{
+  display:block
+}
 .containerImages {
   display: flex;
   flex-wrap: wrap;
@@ -638,7 +641,13 @@ font-size: 20px;
   height: 200px;
 }
 .hidden{
-  display:none
+  display:none;
+}
+.parkNames:hover{
+  background-color: bisque;
+}
+.audioNames:hover{
+  background-color: bisque;
 }
 /**************************End of html info pages***********************************/
 /* vl 1/31: added mediaqueries and merged from css2

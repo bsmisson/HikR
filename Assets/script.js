@@ -30,14 +30,17 @@ function findPark() {
         var container4 = document.createElement("div")
         container1.classList.add('containerItem')
         container2.classList.add('containerImages')
-        container3.classList.add('containerItem')
+        container3.classList.add('containerInfo')
+        container2.classList.add('hidden');
+        container3.classList.add('hidden');
         parkDiv.classList.add('parksContainer')
-        container2.style.display='none';
-        container3.style.display='none';
+        //container2.style.display='none';
+        //container3.style.display='none';
 
         var parkName = data.data[i].fullName;
         console.log(parkName);
         var parkNameEl = document.createElement('h2')
+        parkNameEl.classList.add('parkNames');
         var unorderedList = document.createElement("ol");
         parkNameEl.textContent = parkName;
         
@@ -46,7 +49,7 @@ function findPark() {
           var activityType = data.data[i].activities[j].name;
           console.log(activityType);
           var listItem = document.createElement("p");
-          listItem.textContent = `${activityType}`;
+          listItem.innerHTML = `${activityType}`;
           listItem.style.fontSize = "15px";
           listItem.style.textIndent = "24px";
           container3.append(listItem);
@@ -73,16 +76,12 @@ function findPark() {
         console.log(parkDirection);
         
         var directions = document.createElement("p");
-        directions.style.fontSize = "15px";
-        directions.style.textIndent = "24px";
         directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
         // parkSec.appendChild(directions);
         // added park fees
         var parkFee = data.data[i].entranceFees[0]?.cost;
         console.log(parkFee);
         var fee = document.createElement("p");
-        fee.style.fontSize = "15px";
-        fee.style.textIndent = "24px";
         if(!data.data[i].entranceFees[0]?.cost){
           fee.innerHTML = `No Information Given`
           
@@ -99,8 +98,6 @@ function findPark() {
         var parkAddress3 = data.data[i].addresses[0].stateCode;
         console.log(parkAddress1, parkAddress2);
         var address = document.createElement("p");
-        address.style.fontSize = "15px";
-        address.style.textIndent = "24px";
         address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress0} ${parkAddress1}</br> ${parkAddress3} ${parkAddress2}`;
         // parkSec.appendChild(address);
         container3.append(directions, fee, address)
@@ -114,8 +111,10 @@ function findPark() {
         parkNameEl.addEventListener("click",function(event){
           var target1=event.target.parentNode.children[1]
           var target2=event.target.parentNode.nextElementSibling
-          target1.style.display='flex';
-          target2.style.display='initial';
+          target1.classList.toggle('hidden');
+          target2.classList.toggle('hidden');
+         
+       
         })
 
          
