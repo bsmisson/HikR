@@ -23,9 +23,9 @@ function findAudio() {
           var container3 = document.createElement("div");
           var container4 = document.createElement("div");
           container1.classList.add('containerItem')
-          container2.classList.add('containerAudio')
-          container3.classList.add('containerItem')
+          container2.classList.add('containerImages')
           parkDiv.classList.add('parksContainer')
+          container1.style.display='flex'
           var parkAudioName = data.data[i].title;
           var parkAudioDescription = data.data[i].description;
           var audioName = document.createElement("h6");
@@ -37,15 +37,21 @@ function findAudio() {
           container1.append(parkAudioName);
           container3.append(audioDescription);
           parkDiv.append(container1,container3);
-          parkSec.append(parkDiv);
-    
-
-          
-         // for(j=0;j<data.data[i].versions.length; j++){
-         // var parkAudio = data.data[i].versions[j].url;
-         // }
+          parkSec.append(parkDiv); 
+         for(j=0;j<data.data[i].versions.length; j++){
+          var linkURL = data.data[i].versions[j].url;
+          var parkAudio = document.createElement("audio");
+          parkAudio.id= 'audio-player';
+          parkAudio.controls = 'controls';
+          parkAudio.src=linkURL;
+          parkAudio.type= 'audio/mpeg';
+          //parkAudio.classList.add("result-audio");
+          //parkAudio.setAttribute("src", linkURL);
+          container2.append(parkAudio);
+          }
+          container1.append(container2);
         
-          console.log(parkAudioName);
+        //console.log(parkAudioName);
          // console.log(parkAudio);
          // console.log(parkAudioDescription);
 
