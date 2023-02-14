@@ -4,6 +4,7 @@ let stateName = document.getElementById('city-input');
 let parkSec = document.getElementById('park-info');
 
 function findAudio() {
+  clearHistory();
   
     var requestURL =
       "https://developer.nps.gov/api/v1/multimedia/audio?stateCode=" + stateName.value + "&api_key=aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
@@ -21,24 +22,47 @@ function findAudio() {
           var container2 = document.createElement("div");
           var container3 = document.createElement("div");
           var container4 = document.createElement("div");
-    
-          var parkAudio = data.data[i].versions[0].url;
+          container1.classList.add('containerItem')
+          container2.classList.add('containerAudio')
+          container3.classList.add('containerItem')
+          parkDiv.classList.add('parksContainer')
           var parkAudioName = data.data[i].title;
           var parkAudioDescription = data.data[i].description;
-        
-          console.log(parkAudioName);
-          console.log(parkAudio);
-          console.log(parkAudioDescription);
-
           var audioName = document.createElement("h6");
+          var audioDescription=document.createElement('p');
+          audioDescription.innerHTML=`<strong> Audio Description: </strong> </br> ${parkAudioDescription}`;
           audioName.style.fontSize = "15px";
           audioName.style.textIndent = "24px";
-          audioName.textContent = `<strong> Listen to History </strong> </br> ${parkAudioDescription}`;
+          audioName.textContent = `<strong> Listen to History </strong> </br> ${parkAudioName}`;
+          container1.append(parkAudioName);
+          container3.append(audioDescription);
+          parkDiv.append(container1,container3);
+          parkSec.append(parkDiv);
+    
+
+          
+         // for(j=0;j<data.data[i].versions.length; j++){
+         // var parkAudio = data.data[i].versions[j].url;
+         // }
+        
+          console.log(parkAudioName);
+         // console.log(parkAudio);
+         // console.log(parkAudioDescription);
+
+         
 
 
 
 
 }})}
+
+function clearHistory() {
+  while (parkSec.firstChild) {
+    //console.log(parkSec.firstChild);
+    //console.log(parkSec.lastChild)
+    parkSec.removeChild(parkSec.lastChild);
+  }
+}
 
     searchEl.addEventListener("click", function () {
         const stateName = document.getElementById("city-input").value;
