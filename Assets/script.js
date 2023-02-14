@@ -27,6 +27,7 @@ function findPark() {
         var container1 = document.createElement("div");
         var container2 = document.createElement("div");
         var container3 = document.createElement("div");
+        var container4 = document.createElement("div")
         container1.classList.add('containerItem')
         container2.classList.add('containerImages')
         parkDiv.classList.add('parksContainer')
@@ -74,12 +75,19 @@ function findPark() {
         directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
         // parkSec.appendChild(directions);
         // added park fees
-        var parkFee = data.data[i].entranceFees[0].cost;
+        var parkFee = data.data[i].entranceFees[0]?.cost;
         console.log(parkFee);
         var fee = document.createElement("p");
         fee.style.fontSize = "15px";
         fee.style.textIndent = "24px";
-        fee.innerHTML = `<strong> Park Fees </strong> </br> ${parkFee}`;
+        if(!data.data[i].entranceFees[0]?.cost){
+          fee.innerHTML = `No Information Given`
+          
+        }
+        else{
+          console.log(parkFee)
+          fee.innerHTML = `<strong> Park Fees </strong> </br> ${parkFee}`;
+        }
         // parkSec.appendChild(fee);
         // added addresses
         var parkAddress0 = data.data[i].addresses[0].line1;
@@ -97,6 +105,8 @@ function findPark() {
         var parkLong = data.data[i].longitude;
         console.log(parkLat, parkLong);
         
+        parkDiv.append(container1, container3, container4)
+        parkSec.append(parkDiv)
 
         weatherapi = "https://api.openweathermap.org/data/2.5/onecall?lat=" + parkLat + "&lon=" + parkLong + "&exclude=&appid=21d47407360625ced584e99e4dbc0da8";
 
