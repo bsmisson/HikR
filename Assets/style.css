@@ -56,7 +56,7 @@ header {
 .adventure-pic {
   width: 1265px;
   height: 500px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 /*the text on the img*/
@@ -245,6 +245,11 @@ header {
   padding: 10px;
   font-size: 25px;
 }
+/*box title*/
+.box-title{
+  font-size: 30px;
+  font-weight: bold;
+}
 
 /*text link in each box*/
 .box-link {
@@ -275,14 +280,18 @@ header {
 }
 
 /* Main content style for info, info2 pages */
-.container, .container2 {
+.container, .container2, .container3 {
   padding-top: 10px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
   color: rgb(41, 78, 41);
 }
 
 .h1, .h3, .p {
-  margin-left: 1rem;
+ text-align: center;
+
+}
+h4{
+  margin: 2em;
 }
 
 /* Unordered list style for info, info2 pages*/
@@ -292,7 +301,17 @@ header {
   list-style:disc;
   line-height: 160%;
 }
+/*info3*/
 
+.info3-img, .info1-img{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 500px;
+
+ 
+}
 /* Responsive parameters for info pages */
 @media screen and (max-width: 948px) {
   .bodies, .head {
