@@ -244,6 +244,7 @@ header {
 }
 /*img inside each box*/
 .box-img {
+  display:none;
   width: 365px;
   height: 200px;
 }
