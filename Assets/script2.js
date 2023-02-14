@@ -28,7 +28,7 @@ function findAudio() {
           parkDiv.classList.add('parksContainer');
           container2.classList.add('hidden');
         container3.classList.add('hidden');
-          container1.style.display='flex';
+          container1.style.display='block';
           var parkAudioName = data.data[i].title;
           var parkAudioDescription = data.data[i].description;
           var audioName = document.createElement("h2");
