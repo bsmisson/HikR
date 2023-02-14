@@ -30,6 +30,7 @@ header {
   border-radius: 50%;
 }
 
+
 /* Unordered list for navigation bar */
 .navBar {
   display: flex;
@@ -211,7 +212,24 @@ header {
   position:var(--position);
   top: 50px;
 }
+.parksContainer {
+  border: 4px solid black;
+  margin: 1px;
+  border-radius: 20px;
+  padding: 25px 10px 15px 10px;
+}
 
+.containerItem {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.containerImages{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 50px 50px 50px;
+}
 /*3 boxes container*/
 .boxes-container {
   width: 90%;
@@ -368,5 +386,15 @@ header {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+#maincontainer{
+  background-color:black;
+  width:500px;
+  height:200px;
+}
+.tablecontainer{
+  background-color:black;
+  width:500px;
+  height:200px;
 }
 /**************************End of html info pages***********************************/
