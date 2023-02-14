@@ -86,6 +86,21 @@ header {
   left: 650px;
   border-radius: 30px;
 }
+/*responsive design for search state box*/
+
+
+
+@media screen and (min-width: 768px) {
+  .box-container > * {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .box-container > * {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
 
 /*enter your state name...*/
 .user-input .user-title {
@@ -205,7 +220,21 @@ header {
   grid-gap: 20px;
   position:var(--position);
   bottom: 400px;
+
 }
+
+@media (max-width: 768px) {
+  .boxes-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxes-container {
+    padding: 5px;
+  }
+}
+
 /*each box style*/
 
 .box {
@@ -248,7 +277,8 @@ header {
 }
 
 /*navigation bar parameters for info and info2 html files*/
-#uList {
+#uList, .navBar {
+
   display: flex;
   list-style-type: none;
   padding-right: 30px;
@@ -275,6 +305,34 @@ header {
   list-style:disc;
   line-height: 160%;
 }
+@media screen and (max-width: 948px) {
+  .bodies, .newnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
+.logo {
+  display: flex;
+}
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-container > * {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+
+
+}
+
+
+
+
 
 /* Responsive parameters for info pages */
 @media screen and (max-width: 948px) {

@@ -6,25 +6,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!--Link to the Tailwindcss -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Lato:ital,wght@0,300;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="./Assets/style.css" rel="stylesheet" />
+     <link href="./Assets/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>HikR</title> 
   </head>
 
-  <body>
-    <header>
+  <body class="bodies">
+    <header class='newnav'>
          <!--logo-->
         <img src="./assets/images/Logo.png" alt="logo" class="logo" />
         <!--navigation bar-->
         <nav>
-
-<!-- start of responsive design -->
-
-            <ul class="navBar">
+           <ul class="navBar">
               <li><a href="index.html" class="list-link">Home</a></li><!--when the user click on it..it should open a map-->
               <li><a href="#user-input" class="list-link">Search</a></li><!--scroll down to search section-->
               <li><a href="#box" class="list-link">Information</a></li>
@@ -62,9 +62,12 @@
       
         <!--user input-->
         
-        <div class="user-title" class="w-full ">Enter your  State name & click "Search"
+          
+        <div class="user-title" class="w-full" class="items-container" class="box-container">Enter your  State name & click "Search"
         </div>
-        
+      </div>
+    </div>
+    
         <div class="input">
           <label for="city" class="city">State</label>
           <select id="city-input">
@@ -151,8 +154,8 @@
     <!--3 boxes/Information-->
     <section class="boxes-container" 
     id="boxes-container">
-        <div class=
-        "box" id="box">
+        <div class="box" 
+        id="box">
           <a href="info.html" title="information" class="box-link">
             <img src="./Assets/images/sign.jpg" alt="trail" class="box-img">
             <div class="text">
