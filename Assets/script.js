@@ -64,7 +64,7 @@ function findPark() {
         container1.append(parkNameEl, container2, unorderedList);
         parkDiv.append(container1,  container3)
         parkSec.append(parkDiv)
-        container3.append(directions, fee, address)
+      
         //park directions
         var parkDirection = data.data[i].directionsInfo;
         console.log(parkDirection);
@@ -100,13 +100,14 @@ function findPark() {
         address.style.textIndent = "24px";
         address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress0} ${parkAddress1}</br> ${parkAddress3} ${parkAddress2}`;
         // parkSec.appendChild(address);
-
+        container3.append(directions, fee, address)
         var parkLat = data.data[i].latitude;
         var parkLong = data.data[i].longitude;
         console.log(parkLat, parkLong);
         
         parkDiv.append(container1, container3, container4)
         parkSec.append(parkDiv)
+        
 
         weatherapi = "https://api.openweathermap.org/data/2.5/onecall?lat=" + parkLat + "&lon=" + parkLong + "&exclude=&appid=21d47407360625ced584e99e4dbc0da8";
 
