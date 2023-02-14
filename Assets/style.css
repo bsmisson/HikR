@@ -89,19 +89,7 @@ header {
   left: 650px;
   border-radius: 30px;
 }
-/*responsive design for search state box*/
 
-@media screen and (min-width: 768px) {
-  .box-container > * {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .box-container > * {
-    flex-basis: calc(33.33% - 20px);
-  }
-}
 
 /*enter your state name...*/
 .user-input .user-title {
@@ -240,6 +228,20 @@ header {
   bottom: 400px;
 }
 
+/*responsive design for search state box*/
+
+@media screen and (min-width: 768px) {
+  .box-container > * {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .box-container > * {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+/*boxes*/
 @media (max-width: 768px) {
   .boxes-container {
     padding: 10px;
