@@ -22,19 +22,23 @@ function findAudio() {
           var container2 = document.createElement("div");
           var container3 = document.createElement("div");
           var container4 = document.createElement("div");
-          container1.classList.add('containerItem')
-          container2.classList.add('containerImages')
-          parkDiv.classList.add('parksContainer')
-          container1.style.display='flex'
+          container1.classList.add('containerItem');
+          container2.classList.add('containerImages');
+          container3.classList.add('containerInfo');
+          parkDiv.classList.add('parksContainer');
+          container2.classList.add('hidden');
+        container3.classList.add('hidden');
+          container1.style.display='flex';
           var parkAudioName = data.data[i].title;
           var parkAudioDescription = data.data[i].description;
-          var audioName = document.createElement("h6");
+          var audioName = document.createElement("h2");
+          audioName.classList.add('audioNames');
           var audioDescription=document.createElement('p');
           audioDescription.innerHTML=`<strong> Audio Description: </strong> </br> ${parkAudioDescription}`;
           audioName.style.fontSize = "15px";
           audioName.style.textIndent = "24px";
-          audioName.textContent = `<strong> Listen to History </strong> </br> ${parkAudioName}`;
-          container1.append(parkAudioName);
+          audioName.textContent =parkAudioName;
+          container1.append(audioName);
           container3.append(audioDescription);
           parkDiv.append(container1,container3);
           parkSec.append(parkDiv); 
@@ -50,6 +54,12 @@ function findAudio() {
           container2.append(parkAudio);
           }
           container1.append(container2);
+          audioName.addEventListener("click",function(event){
+            var target1=event.target.parentNode.children[1]
+            var target2=event.target.parentNode.nextElementSibling
+            target1.classList.toggle('hidden');
+            target2.classList.toggle('hidden');
+          })  
         
         //console.log(parkAudioName);
          // console.log(parkAudio);
