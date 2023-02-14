@@ -327,4 +327,7 @@ header {
   width:500px;
   height:200px;
 }
+.hidden{
+  display:none
+}
 /**************************End of html info pages***********************************/
