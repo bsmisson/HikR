@@ -57,7 +57,7 @@ header {
 }
 
 .adventure-pic {
-  width: 1265px;
+  width: 100%;
   height: 500px;
   opacity: 0.6;
 }
@@ -152,11 +152,11 @@ header {
   border: 3px solid rgb(206, 197, 197);
 }
 
-/*output container*/
-/*.output {
+/*output container*
+.output {
   position: var(--position);
-  top: 100px;
-} */
+  top: 10px;
+} 
 
 /*the search result output text*/
 .output .output-txt {
@@ -164,7 +164,7 @@ header {
   width: 600px;
   height: 550px;
   position: var(--position);
-  top: 5em;
+  bottom: 20em;
 }
 
 /*national parks title*/
@@ -217,7 +217,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   position: var(--position);
-  top: 3em;
+  top: 38em;
 }
 
 /*each box style*/
@@ -273,8 +273,12 @@ footer {
 
 
 /***********responsive for index.html************/
-@media (min-width:576px) and (max-width: 768px) {
-  body,
+@media(max-width: 768px) {
+
+  body {
+    display: flex;
+
+  }
   .navBar {
     display: flex;
    
@@ -286,13 +290,6 @@ footer {
   font-size: 20px;
   
 }
-  .logo {
-    display: block;
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  
-  }
   .user-input {
   width: 200px;
   height: 200px;
@@ -372,12 +369,7 @@ font-size: 20px;
   .map-img{
     display: none;
   }
-  .output-txt{
-    position: relative;
-    left: -60px;
-   top: 650px;
-    width: 300px;
-  }
+
   .parks{
     width: 150px;
     font-size: 20px;
@@ -387,8 +379,8 @@ font-size: 20px;
   }
 
 }
+
 @media screen and (max-width: 576px) {
-  body,
   .navBar {
     display: flex;
    
@@ -400,13 +392,6 @@ font-size: 20px;
   font-size: 20px;
   
 }
-  .logo {
-    display: block;
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  
-  }
   .user-input {
   width: 200px;
   height: 200px;
@@ -487,13 +472,6 @@ font-size: 20px;
   .map-img{
     display: none;
   }
-  .output-txt{
-    position: relative;
-    left: -60px;
-   top: 650px;
-    width: 300px;
-  }
- 
   .parks{
     width: 150px;
     font-size: 20px;
@@ -501,7 +479,7 @@ font-size: 20px;
   #park-info{
     width: 220px;
   }
-}
+} 
 
 /*******************html pages: info.html, info2.html*************************/
 .logo1,
