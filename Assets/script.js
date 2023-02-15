@@ -34,16 +34,16 @@ function findPark() {
         container2.classList.add('hidden');
         container3.classList.add('hidden');
         parkDiv.classList.add('parksContainer')
-        //container2.style.display='none';
-        //container3.style.display='none';
-
+        
+        //park name
         var parkName = data.data[i].fullName;
         console.log(parkName);
         var parkNameEl = document.createElement('h2')
         parkNameEl.classList.add('parkNames');
         var unorderedList = document.createElement("ol");
         parkNameEl.textContent = parkName;
-        
+
+        //activities for each park
         var numberActivities = data.data[i].activities.length;
         for (var j = 0; j < numberActivities; j++) {
           var activityType = data.data[i].activities[j].name;
@@ -55,7 +55,6 @@ function findPark() {
           container3.append(listItem);
         }
         //images loop
-        // var parkSec = document.getElementById("park-info");
         for (var j = 0; j < data.data[i].images.length; j++) {
           var linkURL = data.data[i].images[j].url;
           console.log(linkURL);
@@ -77,7 +76,7 @@ function findPark() {
         
         var directions = document.createElement("p");
         directions.innerHTML = `<strong>Park directions:</strong> </br> ${parkDirection}`;
-        // parkSec.appendChild(directions);
+       
         // added park fees
         var parkFee = data.data[i].entranceFees[0]?.cost;
         console.log(parkFee);
@@ -90,16 +89,17 @@ function findPark() {
           console.log(parkFee)
           fee.innerHTML = `<strong> Park Fees </strong> </br> ${parkFee}`;
         }
-        // parkSec.appendChild(fee);
+     
         // added addresses
         var parkAddress0 = data.data[i].addresses[0].line1;
         var parkAddress1 = data.data[i].addresses[0].line2;
         var parkAddress2 = data.data[i].addresses[0].postalCode;
         var parkAddress3 = data.data[i].addresses[0].stateCode;
+
         console.log(parkAddress1, parkAddress2);
+
         var address = document.createElement("p");
         address.innerHTML = `<strong> Park Address </strong> </br> ${parkAddress0} ${parkAddress1}</br> ${parkAddress3} ${parkAddress2}`;
-        // parkSec.appendChild(address);
         container3.append(directions, fee, address)
         var parkLat = data.data[i].latitude;
         var parkLong = data.data[i].longitude;
@@ -127,9 +127,6 @@ function findPark() {
       }
     });
     
-
-
-  // parkSearch.innerHTML= parkName
 }
 
 

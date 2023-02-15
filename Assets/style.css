@@ -26,9 +26,6 @@ header {
 
 /*LOGO*/
 .logo {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
   height: 110px;
   width: 110px;
   border-radius: 50%;
@@ -73,6 +70,17 @@ header {
   color: var(--fontcolor);
   font-weight: 800;
 }
+.paragraph1{
+display: flex;
+  position: var(--position);
+  bottom: 370px;
+  font-size: 30px;
+  padding: 20px;
+  line-height: 52px;
+  color: var(--fontcolor);
+ 
+}
+
 /*HikR*/
 .strong {
   color: rgb(8, 60, 8);
@@ -152,11 +160,7 @@ header {
   border: 3px solid rgb(206, 197, 197);
 }
 
-/*output container*
-.output {
-  position: var(--position);
-  top: 10px;
-} 
+
 
 /*the search result output text*/
 .output .output-txt {
@@ -207,7 +211,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 50px 50px 50px 50px;
+  padding: 50px ;
 }
 
 /*3 boxes container*/
@@ -234,7 +238,6 @@ header {
 
 /*img inside each box*/
 .box-img {
-
   width: 365px;
   height: 200px;
 }
@@ -262,9 +265,6 @@ header {
 footer {
   position: fixed;
   bottom: 0px;
-
-  bottom: 100 !important;
-  left: 0 !important;
   background-color: #899e91 !important;
   padding: 10px !important;
   text-align: center !important;
@@ -281,8 +281,9 @@ footer {
 /*audio output*/
 .output-audio{
   position: relative;
-  bottom: 700px;
+  bottom: 450px;
 }
+/*national park title*/
 .parks-audio{
  
   background-color: #899e91;
@@ -294,6 +295,7 @@ footer {
   border-radius: 20px;
   
 }
+/*the results output*/
 #park-info-audio {
   font-size: 20px;
   color: var(--fontcolor);
@@ -301,22 +303,19 @@ footer {
   box-shadow: 10px 10px 10px gray;
   padding: 1em;
   border-radius: 20px;
+  width: 500px;
  
 }
+/***********responsive for index.html************/
 /*responsive for index.html*/
 @media (min-width:576px) and (max-width: 768px) {
-  body,
-
-/***********responsive for index.html************/
-@media(max-width: 768px) {
-
+  
   body {
     display: flex;
-
+  }
   
-  .navBar {
+ .navBar {
     display: flex;
-   
     gap: 10px;
     padding-right: 10px;
     
@@ -384,8 +383,6 @@ footer {
  
 }
 .boxes-container {
-
-
   grid-gap: 10px;
   position: var(--position);
   bottom: -80px;
@@ -482,13 +479,9 @@ font-size: 20px;
   font-size: 30px;
   padding: 10px;
   line-height: 45px;
-
- 
 }
 .boxes-container {
-
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
   position: var(--position);
   bottom: -80px;
@@ -517,25 +510,9 @@ font-size: 20px;
 } 
 
 /*******************html pages: info.html, info2.html*************************/
-.logo1,
-.logo2 {
-  margin-top: 10px;
-  margin-left: 10px;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
+
 
 /*navigation bar parameters for info and info2 html files*/
-#uList,
-.navBar {
-  display: flex;
-  list-style-type: none;
-  padding-right: 30px;
-  min-width: 400px;
-  gap: 50px;
-  list-style: none;
-}
 
 /* Main content style for info, info2 pages */
 .container,
