@@ -337,6 +337,31 @@ footer {
   margin-bottom: 40px;
   width: 500px;
 }
+/*audio output*/
+.output-audio{
+  position: relative;
+  bottom: 700px;
+}
+.parks-audio{
+ 
+  background-color: #899e91;
+  box-shadow: 10px 10px 10px gray;
+  font-size: 25px;
+  color: var(--fontcolor);
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  
+}
+#park-info-audio {
+  font-size: 20px;
+  color: var(--fontcolor);
+  background-color: var(--boxbg);
+  box-shadow: 10px 10px 10px gray;
+  padding: 1em;
+  border-radius: 20px;
+ 
+}
 /*responsive for index.html*/
 @media (min-width:576px) and (max-width: 768px) {
   body,
