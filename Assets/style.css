@@ -147,6 +147,7 @@ header {
   color: var(--fontcolor);
   cursor: pointer;
 }
+
 .search-btn:hover {
   border: 3px solid rgb(206, 197, 197);
 }
@@ -154,7 +155,7 @@ header {
 /*output container*/
 .output {
   position: var(--position);
-  top: 250px;
+  top: 200px;
 }
 
 /*the search result output text*/
@@ -163,8 +164,7 @@ header {
   width: 600px;
   height: 550px;
   position: var(--position);
-
-  bottom: 68px;
+  top: 5em;
 }
 
 /*national parks title*/
@@ -178,17 +178,6 @@ header {
   border-radius: 20px;
   position: var(--position);
   top: 40px;
-}
-/*map img in output section*/
-.map-img {
-  
-  border-radius: 10px;
-  width: 600px;
-  height: 450px;
-  position: var(--position);
-  bottom: 570px;
-  left: 620px;
-  box-shadow: 10px 10px 10px gray;
 }
 
 /*where the results will appear*/
@@ -220,6 +209,7 @@ header {
   justify-content: space-around;
   padding: 50px 50px 50px 50px;
 }
+
 /*3 boxes container*/
 .boxes-container {
   width: 90%;
@@ -227,12 +217,10 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   position: var(--position);
-  bottom: 400px;
+  top: 3em;
 }
 
-
 /*each box style*/
-
 .box {
   height: 450px;
   color: var(--fontcolor);
@@ -243,6 +231,7 @@ header {
   box-shadow: 10px 10px 10px gray;
   background-color: #899e91;
 }
+
 /*img inside each box*/
 .box-img {
 
@@ -269,53 +258,6 @@ header {
   color: rgb(5, 68, 23);
 }
 
-/*******************html pages: info.html, info2.html*************************/
-.logo1,
-.logo2 {
-  margin-top: 10px;
-  margin-left: 10px;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
-
-/*navigation bar parameters for info and info2 html files*/
-#uList,
-.navBar {
-  display: flex;
-  list-style-type: none;
-  padding-right: 30px;
-  min-width: 400px;
-  gap: 50px;
-  list-style: none;
-}
-
-/* Main content style for info, info2 pages */
-.container,
-.container2,
-.container3 {
-  padding-top: 10px;
-  font-size: 20px;
-  color: rgb(41, 78, 41);
-}
-
-.h1,
-.h3,
-.p {
-  text-align: center;
-}
-h4 {
-  margin: 2em;
-}
-
-/* Unordered list style for info, info2, info3 pages*/
-.info-list {
-  display: flex;
-  flex-direction: column;
-  list-style: disc;
-  line-height: 160%;
-}
-
 /*"BLAZE YOUR NEXT TRAIL*/
 footer {
   position: fixed;
@@ -329,15 +271,8 @@ footer {
   width: 100% !important;
 }
 
-.info3-img,
-.info1-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  width: 500px;
-}
-/*responsive for index.html*/
+
+/***********responsive for index.html************/
 @media (min-width:576px) and (max-width: 768px) {
   body,
   .navBar {
@@ -566,39 +501,74 @@ font-size: 20px;
   #park-info{
     width: 220px;
   }
-
 }
 
-/*boxes
-@media (max-width: 768px) {
-  .boxes-container {
-    padding: 10px;
-  }
+/*******************html pages: info.html, info2.html*************************/
+.logo1,
+.logo2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
-@media (max-width: 480px) {
-  .boxes-container {
-    padding: 5px;
-  }
-}
-/*responsive design for search state box
-
-@media screen and (min-width: 768px) {
-  .box-container > * {
-    flex-basis: calc(50% - 20px);
-  }
+/*navigation bar parameters for info and info2 html files*/
+#uList,
+.navBar {
+  display: flex;
+  list-style-type: none;
+  padding-right: 30px;
+  min-width: 400px;
+  gap: 50px;
+  list-style: none;
 }
 
-@media screen and (min-width: 992px) {
-  .box-container > * {
-    flex-basis: calc(33.33% - 20px);
-  }
+/* Main content style for info, info2 pages */
+.container,
+.container2,
+.container3 {
+  padding-top: 10px;
+  font-size: 20px;
+  color: rgb(41, 78, 41);
 }
 
+.h1,
+.h3,
+.p {
+  text-align: center;
+}
+h4 {
+  margin: 2em;
+}
 
+/* Unordered list style for info, info2, info3 pages*/
+.info-list {
+  display: flex;
+  flex-direction: column;
+  list-style: disc;
+  line-height: 160%;
+}
 
+/*info html output text for National Parks Audio's */
+.output2 .output-txt2 {
+  margin-left: 70px;
+  width: 600px;
+  height: 550px;
+  position: var(--position);
+  bottom: 32em;
+}
 
-/* Responsive parameters for info pages */
+.info3-img,
+.info1-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 500px;
+}
+
+/**** Responsive parameters for info pages ****/
 @media screen and (max-width: 948px) {
   .bodies,
   .head {
@@ -643,29 +613,4 @@ font-size: 20px;
   display:none
 }
 /**************************End of html info pages***********************************/
-/* vl 1/31: added mediaqueries and merged from css2
-/************ Large Devices ************************/
-/* Large  devices (screens above Medium size)      
-.card{
-  border:1px solid black; 
-  min-height:200px;
-  max-height:200px;  }
-
-
-/************ Medium Devices ************************/
-/* Medium devices (landscape tablets, 768px and up) 
-@media only screen and (max-width: 768px) {
-  .valign-wrapper {
-    display: inline-block;
-  }
-
-  
-
-    .card{
-      border:1px solid black; 
-      min-height:200px;
-      max-height:200px;      
-    }
-    
-} 
 
