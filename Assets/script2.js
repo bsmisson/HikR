@@ -1,3 +1,4 @@
+//audio page
 const api_key = "aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
 let searchEl = document.getElementById("mybtn");
 let stateName = document.getElementById('city-input');
@@ -49,8 +50,7 @@ function findAudio() {
           parkAudio.controls = 'controls';
           parkAudio.src=linkURL;
           parkAudio.type= 'audio/mpeg';
-          //parkAudio.classList.add("result-audio");
-          //parkAudio.setAttribute("src", linkURL);
+         
           container2.append(parkAudio);
           }
           container1.append(container2);
@@ -61,21 +61,12 @@ function findAudio() {
             target2.classList.toggle('hidden');
           })  
         
-        //console.log(parkAudioName);
-         // console.log(parkAudio);
-         // console.log(parkAudioDescription);
-
-         
-
-
-
 
 }})}
-
+//clear history
 function clearHistory() {
   while (parkSec.firstChild) {
-    //console.log(parkSec.firstChild);
-    //console.log(parkSec.lastChild)
+  
     parkSec.removeChild(parkSec.lastChild);
   }
 }
