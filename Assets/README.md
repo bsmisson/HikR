@@ -3,9 +3,13 @@
 
 ## Developers
 [Benjamin Smisson](https://github.com/bsmisson):Project manager, Design, JavaScript, HTML, CSS, Documentation.
+
 [Valentina Arango](https://github.com/Valentinaaranggo):Design, JavaScript, APIs, HTML, CSS.
+
 [Maha Abdelnabi](https://github.com/Maha-Abdelnabi):Design, JavaScript, HTML, CSS.
-[Ohmarx Paniagua](https://github.com/Ohmarxp):Design, HTML, CSS
+
+[Ohmarx Paniagua](https://github.com/Ohmarxp):Design, HTML, CSS.
+
 [Daniel Cruz](https://github.com/Daczuniga):HTML, Testing, CSS.
  
 
@@ -50,6 +54,6 @@ THEN  presented with general informations to take into considerations before goi
 
 
 
-![screen shot of the project](./images/hikr1.PNG)
-![](./images/hikr2.PNG)
-![](./images/hikr3.PNG)
+![screen shot of the project](./Assets/images/hikr1.PNG)
+![](./Assets/images/hikr2.PNG)
+![](../Assets/images/hikr3.PNG)
