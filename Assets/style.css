@@ -153,10 +153,10 @@ header {
 }
 
 /*output container*/
-.output {
+/*.output {
   position: var(--position);
-  top: 200px;
-}
+  top: 100px;
+} */
 
 /*the search result output text*/
 .output .output-txt {
