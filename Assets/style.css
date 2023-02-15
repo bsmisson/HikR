@@ -57,7 +57,7 @@ header {
 }
 
 .adventure-pic {
-  width: 1265px;
+  width: 100%;
   height: 500px;
   opacity: 0.6;
 }
@@ -147,15 +147,16 @@ header {
   color: var(--fontcolor);
   cursor: pointer;
 }
+
 .search-btn:hover {
   border: 3px solid rgb(206, 197, 197);
 }
 
-/*output container*/
+/*output container*
 .output {
   position: var(--position);
-  top: 250px;
-}
+  top: 10px;
+} 
 
 /*the search result output text*/
 .output .output-txt {
@@ -163,8 +164,7 @@ header {
   width: 600px;
   height: 550px;
   position: var(--position);
-
-  bottom: 68px;
+  bottom: 20em;
 }
 
 /*national parks title*/
@@ -178,17 +178,6 @@ header {
   border-radius: 20px;
   position: var(--position);
   top: 40px;
-}
-/*map img in output section*/
-.map-img {
-  
-  border-radius: 10px;
-  width: 600px;
-  height: 450px;
-  position: var(--position);
-  bottom: 570px;
-  left: 620px;
-  box-shadow: 10px 10px 10px gray;
 }
 
 /*where the results will appear*/
@@ -220,6 +209,7 @@ header {
   justify-content: space-around;
   padding: 50px 50px 50px 50px;
 }
+
 /*3 boxes container*/
 .boxes-container {
   width: 90%;
@@ -227,12 +217,10 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   position: var(--position);
-  bottom: 400px;
+  top: 38em;
 }
 
-
 /*each box style*/
-
 .box {
   height: 450px;
   color: var(--fontcolor);
@@ -243,6 +231,7 @@ header {
   box-shadow: 10px 10px 10px gray;
   background-color: #899e91;
 }
+
 /*img inside each box*/
 .box-img {
 
@@ -268,6 +257,264 @@ header {
 .box-link:hover {
   color: rgb(5, 68, 23);
 }
+
+/*"BLAZE YOUR NEXT TRAIL*/
+footer {
+  position: fixed;
+  bottom: 0px;
+
+  bottom: 100 !important;
+  left: 0 !important;
+  background-color: #899e91 !important;
+  padding: 10px !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+.info3-img,
+.info1-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 500px;
+}
+/*audio output*/
+.output-audio{
+  position: relative;
+  bottom: 700px;
+}
+.parks-audio{
+ 
+  background-color: #899e91;
+  box-shadow: 10px 10px 10px gray;
+  font-size: 25px;
+  color: var(--fontcolor);
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  
+}
+#park-info-audio {
+  font-size: 20px;
+  color: var(--fontcolor);
+  background-color: var(--boxbg);
+  box-shadow: 10px 10px 10px gray;
+  padding: 1em;
+  border-radius: 20px;
+ 
+}
+/*responsive for index.html*/
+@media (min-width:576px) and (max-width: 768px) {
+  body,
+
+/***********responsive for index.html************/
+@media(max-width: 768px) {
+
+  body {
+    display: flex;
+
+  
+  .navBar {
+    display: flex;
+   
+    gap: 10px;
+    padding-right: 10px;
+    
+  }
+.list-link{
+  font-size: 20px;
+  
+}
+  .user-input {
+  width: 200px;
+  height: 200px;
+  position: var(--position);
+  bottom: 450px;
+  left: 20px;
+ 
+}
+.user-input .user-title {
+ 
+  padding: 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+/*input area..the state and it's input*/
+.user-input .input {
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+}
+
+/*state label*/
+.city {
+ display: none;
+
+}
+
+/*input*/
+#city-input {
+ position: relative;
+ bottom: 90px;
+ left: 30px;
+  padding: 10px;
+ 
+}
+
+/*search button*/
+.search-btn {
+  position: var(--position);
+  bottom: -15px;
+  left: -90px;
+  width: 50px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.paragraph {
+  display: flex;
+  bottom: 500px;
+  font-size: 30px;
+  padding: 10px;
+  line-height: 45px;
+
+ 
+}
+.boxes-container {
+
+
+  grid-gap: 10px;
+  position: var(--position);
+  bottom: -80px;
+  right: 50px;
+}
+.box{
+  height:400px;
+  width: 450px;
+}
+  .box-link {
+font-size: 20px;
+  }
+  .box-img{
+  margin: auto;
+  }
+  .map-img{
+    display: none;
+  }
+
+  .parks{
+    width: 150px;
+    font-size: 20px;
+  }
+  #park-info{
+    width: 220px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .navBar {
+    display: flex;
+   
+    gap: 10px;
+    padding-right: 10px;
+    
+  }
+.list-link{
+  font-size: 20px;
+  
+}
+  .user-input {
+  width: 200px;
+  height: 200px;
+  position: var(--position);
+  bottom: 450px;
+  left: 20px;
+ 
+}
+.user-input .user-title {
+ 
+  padding: 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+/*input area..the state and it's input*/
+.user-input .input {
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+}
+
+/*state label*/
+.city {
+ display: none;
+
+}
+
+/*input*/
+#city-input {
+ position: relative;
+ bottom: 90px;
+ left: 30px;
+  padding: 10px;
+ 
+}
+
+/*search button*/
+.search-btn {
+  position: var(--position);
+  bottom: -15px;
+  left: -90px;
+  width: 50px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.paragraph {
+  display: flex;
+  bottom: 500px;
+  font-size: 30px;
+  padding: 10px;
+  line-height: 45px;
+
+ 
+}
+.boxes-container {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  position: var(--position);
+  bottom: -80px;
+  right: 50px;
+}
+.box{
+  height:400px;
+  width: 450px;
+}
+  .box-link {
+font-size: 20px;
+  }
+  .box-img{
+  margin: auto;
+  }
+  .map-img{
+    display: none;
+  }
+  .parks{
+    width: 150px;
+    font-size: 20px;
+  }
+  #park-info{
+    width: 220px;
+  }
+} 
 
 /*******************html pages: info.html, info2.html*************************/
 .logo1,
@@ -316,17 +563,13 @@ h4 {
   line-height: 160%;
 }
 
-/*"BLAZE YOUR NEXT TRAIL*/
-footer {
-  position: fixed;
-  bottom: 0px;
-
-  bottom: 100 !important;
-  left: 0 !important;
-  background-color: #899e91 !important;
-  padding: 10px !important;
-  text-align: center !important;
-  width: 100% !important;
+/*info html output text for National Parks Audio's */
+.output2 .output-txt2 {
+  margin-left: 70px;
+  width: 600px;
+  height: 550px;
+  position: var(--position);
+  bottom: 32em;
 }
 
 .info3-img,
@@ -337,293 +580,8 @@ footer {
   margin-bottom: 40px;
   width: 500px;
 }
-/*audio output*/
-.output-audio{
-  position: relative;
-  bottom: 700px;
-}
-.parks-audio{
- 
-  background-color: #899e91;
-  box-shadow: 10px 10px 10px gray;
-  font-size: 25px;
-  color: var(--fontcolor);
-  width: 300px;
-  padding: 10px;
-  border-radius: 20px;
-  
-}
-#park-info-audio {
-  font-size: 20px;
-  color: var(--fontcolor);
-  background-color: var(--boxbg);
-  box-shadow: 10px 10px 10px gray;
-  padding: 1em;
-  border-radius: 20px;
- 
-}
-/*responsive for index.html*/
-@media (min-width:576px) and (max-width: 768px) {
-  body,
-  .navBar {
-    display: flex;
-   
-    gap: 10px;
-    padding-right: 10px;
-    
-  }
-.list-link{
-  font-size: 20px;
-  
-}
-  .logo {
-    display: block;
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  
-  }
-  .user-input {
-  width: 200px;
-  height: 200px;
-  position: var(--position);
-  bottom: 450px;
-  left: 20px;
- 
-}
-.user-input .user-title {
- 
-  padding: 5px;
-  display: flex;
-  font-size: 20px;
-}
 
-/*input area..the state and it's input*/
-.user-input .input {
-
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  color: var(--fontcolor);
-}
-
-/*state label*/
-.city {
- display: none;
-
-}
-
-/*input*/
-#city-input {
- position: relative;
- bottom: 90px;
- left: 30px;
-  padding: 10px;
- 
-}
-
-/*search button*/
-.search-btn {
-  position: var(--position);
-  bottom: -15px;
-  left: -90px;
-  width: 50px;
-  font-size: 15px;
-  cursor: pointer;
-}
-.paragraph {
-  display: flex;
-  bottom: 500px;
-  font-size: 30px;
-  padding: 10px;
-  line-height: 45px;
-
- 
-}
-.boxes-container {
-
-
-  grid-gap: 10px;
-  position: var(--position);
-  bottom: -80px;
-  right: 50px;
-}
-.box{
-  height:400px;
-  width: 450px;
-}
-  .box-link {
-font-size: 20px;
-  }
-  .box-img{
-  margin: auto;
-  }
-  .map-img{
-    display: none;
-  }
-  .output-txt{
-    position: relative;
-    left: -60px;
-   top: 650px;
-    width: 300px;
-  }
-  .parks{
-    width: 150px;
-    font-size: 20px;
-  }
-  #park-info{
-    width: 220px;
-  }
-
-}
-@media screen and (max-width: 576px) {
-  body,
-  .navBar {
-    display: flex;
-   
-    gap: 10px;
-    padding-right: 10px;
-    
-  }
-.list-link{
-  font-size: 20px;
-  
-}
-  .logo {
-    display: block;
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  
-  }
-  .user-input {
-  width: 200px;
-  height: 200px;
-  position: var(--position);
-  bottom: 450px;
-  left: 20px;
- 
-}
-.user-input .user-title {
- 
-  padding: 5px;
-  display: flex;
-  font-size: 20px;
-}
-
-/*input area..the state and it's input*/
-.user-input .input {
-
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  color: var(--fontcolor);
-}
-
-/*state label*/
-.city {
- display: none;
-
-}
-
-/*input*/
-#city-input {
- position: relative;
- bottom: 90px;
- left: 30px;
-  padding: 10px;
- 
-}
-
-/*search button*/
-.search-btn {
-  position: var(--position);
-  bottom: -15px;
-  left: -90px;
-  width: 50px;
-  font-size: 15px;
-  cursor: pointer;
-}
-.paragraph {
-  display: flex;
-  bottom: 500px;
-  font-size: 30px;
-  padding: 10px;
-  line-height: 45px;
-
- 
-}
-.boxes-container {
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-  position: var(--position);
-  bottom: -80px;
-  right: 50px;
-}
-.box{
-  height:400px;
-  width: 450px;
-}
-  .box-link {
-font-size: 20px;
-  }
-  .box-img{
-  margin: auto;
-  }
-  .map-img{
-    display: none;
-  }
-  .output-txt{
-    position: relative;
-    left: -60px;
-   top: 650px;
-    width: 300px;
-  }
- 
-  .parks{
-    width: 150px;
-    font-size: 20px;
-  }
-  #park-info{
-    width: 220px;
-  }
-
-}
-
-/*boxes
-@media (max-width: 768px) {
-  .boxes-container {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .boxes-container {
-    padding: 5px;
-  }
-}
-/*responsive design for search state box
-
-@media screen and (min-width: 768px) {
-  .box-container > * {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .box-container > * {
-    flex-basis: calc(33.33% - 20px);
-  }
-}
-
-
-
-
-/* Responsive parameters for info pages */
+/**** Responsive parameters for info pages ****/
 @media screen and (max-width: 948px) {
   .bodies,
   .head {
@@ -668,29 +626,4 @@ font-size: 20px;
   display:none
 }
 /**************************End of html info pages***********************************/
-/* vl 1/31: added mediaqueries and merged from css2
-/************ Large Devices ************************/
-/* Large  devices (screens above Medium size)      
-.card{
-  border:1px solid black; 
-  min-height:200px;
-  max-height:200px;  }
-
-
-/************ Medium Devices ************************/
-/* Medium devices (landscape tablets, 768px and up) 
-@media only screen and (max-width: 768px) {
-  .valign-wrapper {
-    display: inline-block;
-  }
-
-  
-
-    .card{
-      border:1px solid black; 
-      min-height:200px;
-      max-height:200px;      
-    }
-    
-} 
 
