@@ -2,7 +2,7 @@
 const api_key = "aRYOMb7qWKmAkeRqI32IlmrDh2cpdBE6k64szJUR";
 let searchEl = document.getElementById("mybtn");
 let stateName = document.getElementById('city-input');
-let parkSec = document.getElementById('park-info');
+let parkSec = document.getElementById('park-info-audio');
 
 function findAudio() {
   clearHistory();
