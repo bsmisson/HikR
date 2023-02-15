@@ -11,9 +11,9 @@
 
 
 ## The links for our Project
-[github page]()
+[github page](https://github.com/bsmisson/HikR)
 
-[deployed webpage]()
+[deployed webpage](https://bsmisson.github.io/HikR/)
 
 
 ## Descripton
